@@ -1,22 +1,33 @@
-﻿# ARES: Planetary Analog Temporal Discovery Engine
+# ARES: Planetary Analog & Launch Operations Discovery Engine (5 km² Global Sampling)
 
-Motor de descubrimiento temporal basado en datos abiertos de la NASA para identificar las mejores ventanas mensuales de campaña en 56 cuencas endorreicas terrestres como analogos de sitios clave en la Luna y Marte.
+Motor de descubrimiento espacial y temporal basado en datos abiertos de la NASA (Earthdata, AppEEARS, NASA POWER, GIBS, LRO Diviner y PDS) y ESA Copernicus DEM para identificar las mejores parcelas terrestres de **5.0 km² ($2.24 \times 2.24\text{ km}$)** y ventanas mensuales de campaña como análogos de sitios clave en la Luna y Marte.
 
-## Arquitectura y Fuentes de Datos
-- **Climatologia Mensual (NASA POWER API):** Rango termico diurno, precipitacion, velocidad del viento, humedad relativa y radiacion solar (672 ventanas cuenca-mes).
-- **Topografia (Copernicus DEM):** Elevacion y pendiente real en grados alrededor del nucleo lacustre.
-- **Mineralogia Hiperespectral (ISS EMIT L2BMIN via AppEEARS):** Identificacion mineral y profundidad de banda espectral (`scripts/merge_appeears.py`).
+## Arquitectura de Índices y Fuentes de Datos
+- **Sub-Índice A (Similitud Planetaria):**
+  1. **Morfología y Regolito:** Pendiente DEM, rugosidad superficial (TRI), afinidad mineralógica (Carbonatos, Sulfatos, Filosilicatos, **Basalto/Olivino** vía ISS EMIT L2BMIN) y granulometría del polvo.
+  2. **Extremos Ambientales:** Amplitud térmica diurna ($\Delta T$), aridez, albedo MODIS y dinámica eólica/polvo.
+  3. **Recursos y Subsuelo (ISRU):** Hielo/permafrost, salmueras hidratadas y tubos de lava / refugios cratéricos.
+- **Sub-Índice B (Viabilidad de Operaciones de Base y Despegue):**
+  1. **Geometría Orbital:** Latitud (impulso rotacional ecuatorial o iluminación rasante polar lunar), altitud s.n.m. y radiación solar.
+  2. **Estabilidad Geotécnica de Plataforma:** Terreno plano ($< 5^\circ$), firmeza del sustrato en seco y baja dispersión abrasiva.
+  3. **Ventana Meteorológica:** Velocidad media y ráfagas de viento, estabilidad atmosférica, baja nubosidad y baja opacidad por polvo.
 
-## Inicio Rapido
-1. Clonar el repositorio:
+## Automatización de Malla Global de 5 km² (Opción 2: Cinturones Áridos, Volcánicos, Polares y Cráteres)
 
-    git clone https://github.com/corche-a/aresproject-nasa.git
-    cd aresproject-nasa
+Ejecutar el pipeline maestro automatizado:
 
-2. Abrir `frontend/index.html` directamente en cualquier navegador web para explorar el mapa interactivo y los perfiles estacionales.
-3. Para integrar los resultados de **EMIT (AppEEARS)** una vez descargado el ZIP:
-   - Colocar los archivos `.csv` en `data/raw/appeears/`
-   - Ejecutar:
+```bash
+python scripts/automate_option2_pipeline.py
+```
 
-    python scripts/merge_appeears.py
-    python scripts/build_engine.py
+Opciones avanzadas:
+- Para generar el 100% de la malla continua de ~2.28 millones de parcelas de $5.0\text{ km}^2$ en particiones en disco (`data/grid_5km2/`):
+  ```bash
+  python scripts/automate_option2_pipeline.py --stride 1
+  ```
+- Para enviar y descargar lotes de 1,000 coordenadas automáticamente desde la API REST de **NASA AppEEARS**, copia `.env.example` a `.env` con tus credenciales de NASA Earthdata Login y ejecuta:
+  ```bash
+  python scripts/appeears_automator.py --max-submit 5 --poll
+  python scripts/merge_appeears.py
+  python scripts/build_engine.py
+  ```

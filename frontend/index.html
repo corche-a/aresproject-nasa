@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARES | Planetary Analog Temporal Discovery Engine</title>
+  <title>ARES | 5 km² Planetary Analog &amp; Launch Operations Engine</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,86 +15,144 @@
       --border: #23304a;
       --accent: #38bdf8;
       --mars: #f97316;
+      --ops: #10b981;
       --text: #e2e8f0;
       --muted: #94a3b8;
     }
     * { box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
     body { margin: 0; background: var(--bg); color: var(--text); }
     header {
-      padding: 14px 24px; background: #0f1624; border-bottom: 1px solid var(--border);
+      padding: 12px 24px; background: #0f1624; border-bottom: 1px solid var(--border);
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
     }
-    header h1 { margin: 0; font-size: 1.25rem; letter-spacing: 0.5px; }
+    header h1 { margin: 0; font-size: 1.15rem; letter-spacing: 0.5px; }
     header h1 span { color: var(--mars); }
     .badge {
       background: #1e293b; border: 1px solid var(--border); padding: 4px 10px;
-      border-radius: 999px; font-size: 0.8rem; color: var(--accent);
+      border-radius: 999px; font-size: 0.78rem; color: var(--accent);
     }
     .grid {
-      display: grid; grid-template-columns: 340px 1fr 380px; gap: 14px;
-      padding: 14px; height: calc(100vh - 60px);
+      display: grid; grid-template-columns: 360px 1fr 420px; gap: 14px;
+      padding: 14px; height: calc(100vh - 56px);
     }
-    @media (max-width: 1150px) { .grid { grid-template-columns: 1fr; height: auto; } }
+    @media (max-width: 1200px) { .grid { grid-template-columns: 1fr; height: auto; } }
     .card {
       background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
       padding: 14px; display: flex; flex-direction: column; overflow-y: auto;
     }
-    h2 { margin: 0 0 10px 0; font-size: 0.95rem; text-transform: uppercase; color: var(--accent); letter-spacing: 0.6px; }
-    label { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
-    select, input[type="range"] { width: 100%; margin-top: 4px; }
+    h2 {
+      margin: 0 0 8px 0; font-size: 0.86rem; text-transform: uppercase;
+      color: var(--accent); letter-spacing: 0.6px;
+    }
+    .subindex-title {
+      margin: 12px 0 5px 0; padding: 5px 8px; border-radius: 6px;
+      font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .subindex-a { background: rgba(56, 189, 248, 0.12); color: var(--accent); border-left: 3px solid var(--accent); }
+    .subindex-b { background: rgba(16, 185, 129, 0.12); color: var(--ops); border-left: 3px solid var(--ops); }
+    label { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 7px; }
+    select, input[type="range"] { width: 100%; margin-top: 3px; }
+    input[type="range"] { height: 5px; cursor: pointer; }
     select {
       background: #0b0f19; color: var(--text); border: 1px solid var(--border);
-      padding: 8px; border-radius: 6px; font-size: 0.9rem;
+      padding: 6px 8px; border-radius: 6px; font-size: 0.84rem;
     }
     .target-desc {
-      margin-top: 8px; padding: 8px 10px; background: #0f172a; border-left: 3px solid var(--mars);
-      font-size: 0.82rem; color: #cbd5e1; border-radius: 4px;
+      margin-top: 6px; padding: 7px 10px; background: #0f172a; border-left: 3px solid var(--mars);
+      font-size: 0.76rem; color: #cbd5e1; border-radius: 4px; line-height: 1.35;
     }
-    .slider-row { display: flex; justify-content: space-between; font-size: 0.8rem; margin-top: 8px; }
-    #map { width: 100%; height: 100%; min-height: 420px; border-radius: 8px; }
+    .slider-row { display: flex; justify-content: space-between; font-size: 0.75rem; margin-top: 5px; color: #cbd5e1; }
+    .slider-row span:last-child { font-weight: 600; color: var(--accent); }
+    .slider-row.ops-row span:last-child { color: var(--ops); }
+    #map { width: 100%; height: 100%; min-height: 440px; border-radius: 8px; }
     .rank-item {
-      padding: 10px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px;
-      background: #0f172a; cursor: pointer; transition: border-color 0.15s;
+      padding: 8px 10px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px;
+      background: #0f172a; cursor: pointer; transition: border-color 0.15s, background 0.15s;
     }
-    .rank-item:hover, .rank-item.active { border-color: var(--accent); }
-    .rank-top { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+    .rank-item:hover, .rank-item.active { border-color: var(--accent); background: #132038; }
+    .rank-top { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 0.85rem; }
     .score-pill {
-      background: rgba(56, 189, 248, 0.15); color: var(--accent);
-      padding: 2px 8px; border-radius: 6px; font-size: 0.85rem;
+      background: rgba(56, 189, 248, 0.16); color: var(--accent);
+      padding: 2px 8px; border-radius: 6px; font-size: 0.78rem; font-weight: 700;
     }
-    .rank-meta { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
-    .chart-box { margin-top: 12px; background: #0f172a; padding: 10px; border-radius: 8px; }
-  
+    .sub-pills {
+      display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; font-size: 0.7rem;
+    }
+    .sub-pill {
+      padding: 1px 6px; border-radius: 4px; background: #1e293b; color: #cbd5e1;
+    }
+    .sub-pill.a { border-left: 2px solid var(--accent); }
+    .sub-pill.b { border-left: 2px solid var(--ops); }
+    .sub-pill.cat { border-left: 2px solid var(--mars); color: #fdba74; }
+    .sub-pill.ok { color: #4ade80; }
+    .sub-pill.warn { color: #fbbf24; }
+    .rank-meta { font-size: 0.72rem; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+    .detail-box {
+      margin-top: 6px; padding: 10px; background: #0f172a; border: 1px solid var(--border);
+      border-radius: 8px; font-size: 0.75rem;
+    }
+    .detail-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 6px;
+    }
+    .metric-card {
+      background: #131c31; padding: 6px 8px; border-radius: 6px; border: 1px solid #1e293b;
+    }
+    .metric-card .m-title { font-size: 0.67rem; color: var(--muted); text-transform: uppercase; }
+    .metric-card .m-val { font-size: 0.79rem; font-weight: 600; color: var(--text); margin-top: 2px; }
+    .btn-row { display: flex; gap: 6px; margin-top: 8px; }
+    .action-btn {
+      flex: 1; padding: 6px 8px; border-radius: 6px; border: 1px solid var(--border);
+      background: #1e293b; color: var(--accent); font-size: 0.74rem; font-weight: 600;
+      cursor: pointer; text-align: center; text-decoration: none; transition: background 0.15s;
+    }
+    .action-btn:hover { background: #283750; }
+    .limits-box {
+      margin-top: 6px; padding: 6px 8px; border-radius: 6px; background: rgba(249, 115, 22, 0.08);
+      border-left: 2px solid var(--mars); font-size: 0.71rem; color: #cbd5e1; line-height: 1.35;
+    }
+    .chart-box { margin-top: 8px; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid var(--border); }
+
     .map-card { position: relative; padding: 8px; overflow: hidden; }
     .topo-control {
       position: absolute; top: 18px; right: 18px; z-index: 1000;
       background: rgba(15, 23, 42, 0.92); backdrop-filter: blur(6px);
       border: 1px solid var(--border); border-radius: 8px;
-      padding: 10px 12px; width: 230px; box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+      padding: 10px 12px; width: 255px; box-shadow: 0 4px 14px rgba(0,0,0,0.45);
     }
     .topo-control-header {
       display: flex; justify-content: space-between; align-items: center;
-      font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 6px;
+      font-size: 0.76rem; font-weight: 600; color: var(--accent); margin-bottom: 6px;
     }
-    .topo-control select { padding: 4px 6px; font-size: 0.78rem; margin-top: 0; margin-bottom: 6px; }
+    .topo-control select { padding: 4px 6px; font-size: 0.76rem; margin-top: 0; margin-bottom: 6px; }
   </style>
 </head>
 <body>
   <header>
-    <h1><span>ARES</span> // Temporal Discovery Engine for Moon &amp; Mars Analogs</h1>
+    <h1><span>ARES</span> // Global 5 km² Terrestrial Sampling Engine (AppEEARS + Sub-Índices A &amp; B)</h1>
     <div id="statusBadge" class="badge">Cargando datos...</div>
   </header>
 
   <div class="grid">
     <div class="card">
-      <h2>1. Objetivo Planetario</h2>
-      <label for="targetSelect">Sitio de Mision (Luna / Marte)</label>
+      <h2>1. Objetivo Planetario y Filtros (5 km²)</h2>
+      <label for="targetSelect">Sitio de Misión (Luna / Marte)</label>
       <select id="targetSelect"></select>
       <div id="targetDesc" class="target-desc"></div>
 
+      <label for="categoryFilter">Provincia Geológica (Tierra Firme)</label>
+      <select id="categoryFilter">
+        <option value="ALL">Todas las Provincias Terrestres (Global)</option>
+        <option value="endorheic">Cuencas Endorreicas y Paleolagos</option>
+        <option value="volcanic">Campos Volcánicos Basálticos y Tubos de Lava</option>
+        <option value="impact_crater">Cráteres de Impacto en Tierra Firme</option>
+        <option value="arid_desert">Desiertos Hiperáridos y Regolito Eólico</option>
+        <option value="polar_permafrost">Regiones Polares, Permafrost y Criosfera</option>
+      </select>
+
       <label for="monthFilter">Ventana Temporal</label>
       <select id="monthFilter">
-        <option value="BEST">Mejor Mes Optimo por Cuenca (Auto-Discovery)</option>
+        <option value="BEST">Mejor Mes Óptimo por Parcela de 5 km² (Auto-Discovery)</option>
         <option value="1">Enero (JAN)</option>
         <option value="2">Febrero (FEB)</option>
         <option value="3">Marzo (MAR)</option>
@@ -109,53 +167,93 @@
         <option value="12">Diciembre (DEC)</option>
       </select>
 
-      <h2 style="margin-top:16px;">2. Pesos de Similitud</h2>
-      <div class="slider-row"><span>Aridez / Sequia</span><span id="wAridityVal">25%</span></div>
-      <input type="range" id="wAridity" min="0" max="100" value="25" />
+      <div class="slider-row" style="margin-top:8px;">
+        <span>Balance: Sub-Índice A vs. Sub-Índice B</span>
+        <span id="wBalanceVal">65% A / 35% B</span>
+      </div>
+      <input type="range" id="wSubindexA" min="0" max="100" value="65" />
 
-      <div class="slider-row"><span>Contraste Termico Diurno</span><span id="wThermalVal">25%</span></div>
-      <input type="range" id="wThermal" min="0" max="100" value="25" />
+      <div class="subindex-title subindex-a">
+        <span>Sub-Índice A: Similitud Planetaria</span>
+        <span>Análogo</span>
+      </div>
 
-      <div class="slider-row"><span>Actividad de Polvo / Viento</span><span id="wDustVal">15%</span></div>
-      <input type="range" id="wDust" min="0" max="100" value="15" />
-
-      <div class="slider-row"><span>Topografia / Pendiente (DEM)</span><span id="wSlopeVal">15%</span></div>
+      <div class="slider-row"><span>1. Morfología, Pendiente y Rugosidad (DEM/Regolito)</span><span id="wSlopeVal">15%</span></div>
       <input type="range" id="wSlope" min="0" max="100" value="15" />
 
-      <div class="slider-row"><span>Afinidad Mineralogica</span><span id="wMineralVal">20%</span></div>
-      <input type="range" id="wMineral" min="0" max="100" value="20" />
+      <div class="slider-row"><span>1b. Mineralogía (Basalto/Olivino/Evaporitas)</span><span id="wMineralVal">18%</span></div>
+      <input type="range" id="wMineral" min="0" max="100" value="18" />
+
+      <div class="slider-row"><span>2a. Extremos: Aridez / Sequía</span><span id="wAridityVal">20%</span></div>
+      <input type="range" id="wAridity" min="0" max="100" value="20" />
+
+      <div class="slider-row"><span>2b. Extremos: Amplitud Térmica Diurna</span><span id="wThermalVal">20%</span></div>
+      <input type="range" id="wThermal" min="0" max="100" value="20" />
+
+      <div class="slider-row"><span>2c. Extremos: Dinámica Eólica / Polvo</span><span id="wDustVal">15%</span></div>
+      <input type="range" id="wDust" min="0" max="100" value="15" />
+
+      <div class="slider-row"><span>3. Recursos ISRU y Subsuelo (Hielo/Salmueras/Cuevas)</span><span id="wIsruVal">12%</span></div>
+      <input type="range" id="wIsru" min="0" max="100" value="12" />
+
+      <div class="subindex-title subindex-b">
+        <span>Sub-Índice B: Operaciones y Despegue</span>
+        <span>Base / Launch</span>
+      </div>
+
+      <div class="slider-row ops-row"><span>1. Geometría Orbital (Latitud, Elevación y Solar)</span><span id="wOrbitalVal">30%</span></div>
+      <input type="range" id="wOrbital" min="0" max="100" value="30" />
+
+      <div class="slider-row ops-row"><span>2. Estabilidad Geotécnica (&lt;5°, Firmeza, Baja Abrasión)</span><span id="wGeotechVal">35%</span></div>
+      <input type="range" id="wGeotech" min="0" max="100" value="35" />
+
+      <div class="slider-row ops-row"><span>3. Ventana Meteorológica (Viento, Ráfagas, Nubes)</span><span id="wWeatherVal">35%</span></div>
+      <input type="range" id="wWeather" min="0" max="100" value="35" />
     </div>
 
     <div class="card map-card">
       <div id="map"></div>
       <div id="topoControl" class="topo-control">
         <div class="topo-control-header">
-          <span>Capa Topografica</span>
-          <span id="topoOpacityVal">45%</span>
+          <span>Capa Satelital / Topográfica</span>
+          <span id="topoOpacityVal">75%</span>
         </div>
         <select id="topoStyle">
+          <option value="satellite">Satélite Alta Res. (Google Earth / Esri)</option>
           <option value="opentopo">Relieve + Curvas (OpenTopoMap)</option>
           <option value="hillshade">Sombreado DEM 3D (Esri Hillshade)</option>
-          <option value="esritopo">Topografico Fisico (Esri Topo)</option>
+          <option value="esritopo">Topográfico Físico (Esri Topo)</option>
+          <option value="gibs_truecolor">NASA GIBS VIIRS True Color</option>
         </select>
-        <input type="range" id="topoOpacity" min="0" max="100" value="45" />
+        <input type="range" id="topoOpacity" min="0" max="100" value="75" />
       </div>
     </div>
 
     <div class="card">
-      <h2>3. Mejores Ventanas Analogas</h2>
+      <h2>3. Mejores Parcelas de 5 km² (Similitud + Operaciones)</h2>
       <div id="leaderboard"></div>
+
+      <div id="basinDetailBox" class="detail-box"></div>
+
       <div class="chart-box">
-        <h2 id="chartTitle" style="font-size:0.82rem;">Dinamica Estacional (12 Meses)</h2>
-        <canvas id="seasonalChart" height="190"></canvas>
+        <h2 id="chartTitle" style="font-size:0.78rem;">Dinámica Estacional (12 Meses)</h2>
+        <canvas id="seasonalChart" height="165"></canvas>
       </div>
     </div>
   </div>
 
   <script>
     const DATA = window.ARES_DATA;
+    const CATEGORY_LABELS = {
+      endorheic: "Cuenca Endorreica",
+      volcanic: "Volcánico / Tubos de Lava",
+      impact_crater: "Cráter de Impacto",
+      arid_desert: "Desierto Hiperárido",
+      polar_permafrost: "Polar / Permafrost"
+    };
+
     const statusBadge = document.getElementById("statusBadge");
-    statusBadge.textContent = `${DATA.metadata.basins_count} Cuencas | ${DATA.metadata.total_windows} Ventanas | EMIT: ${DATA.metadata.emit_integrated ? "Integrado" : "Prior Lit. (Pendiente CSV)"}`;
+    statusBadge.textContent = `${DATA.metadata.basins_count} Parcelas de 5 km² (2.24×2.24 km) | ${DATA.metadata.total_windows} Ventanas | AppEEARS + Sub-Índices A+B`;
 
     const targetSelect = document.getElementById("targetSelect");
     DATA.targets.forEach(t => {
@@ -165,16 +263,26 @@
       targetSelect.appendChild(opt);
     });
 
-    const map = L.map("map").setView([15, 10], 2);
+    const map = L.map("map").setView([18, 12], 2);
     L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
       attribution: "&copy; OpenStreetMap &copy; CARTO"
     }).addTo(map);
     const TOPO_SOURCES = {
+      satellite: {
+        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        attribution: "&copy; Esri World Imagery",
+        maxZoom: 18
+      },
       opentopo: { url: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", attribution: "&copy; OpenTopoMap", maxZoom: 17 },
       hillshade: { url: "https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}", attribution: "&copy; Esri Hillshade", maxZoom: 16 },
-      esritopo: { url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", attribution: "&copy; Esri Topo", maxZoom: 18 }
+      esritopo: { url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", attribution: "&copy; Esri Topo", maxZoom: 18 },
+      gibs_truecolor: {
+        url: "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/2024-06-15/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+        attribution: "&copy; NASA EOSDIS GIBS",
+        maxZoom: 9
+      }
     };
-    let currentTopoLayer = L.tileLayer(TOPO_SOURCES.opentopo.url, { attribution: TOPO_SOURCES.opentopo.attribution, maxZoom: 17, opacity: 0.45 }).addTo(map);
+    let currentTopoLayer = L.tileLayer(TOPO_SOURCES.satellite.url, { attribution: TOPO_SOURCES.satellite.attribution, maxZoom: 18, opacity: 0.75 }).addTo(map);
     const topoControlEl = document.getElementById("topoControl");
     L.DomEvent.disableClickPropagation(topoControlEl);
     L.DomEvent.disableScrollPropagation(topoControlEl);
@@ -192,42 +300,217 @@
       currentTopoLayer = L.tileLayer(src.url, { attribution: src.attribution, maxZoom: src.maxZoom, opacity: Number(topoOpacitySlider.value) / 100 }).addTo(map);
     });
     const markersLayer = L.layerGroup().addTo(map);
+    const polygon5kmLayer = L.layerGroup().addTo(map);
 
     let selectedBasinId = null;
     let chartInstance = null;
 
     function getWeights() {
+      const shareA = Number(document.getElementById("wSubindexA").value);
+      const shareB = 100 - shareA;
+      document.getElementById("wBalanceVal").textContent = `${shareA}% A / ${shareB}% B`;
+
       const a = Number(document.getElementById("wAridity").value);
       const t = Number(document.getElementById("wThermal").value);
       const d = Number(document.getElementById("wDust").value);
       const s = Number(document.getElementById("wSlope").value);
       const m = Number(document.getElementById("wMineral").value);
+      const i = Number(document.getElementById("wIsru").value);
+
       document.getElementById("wAridityVal").textContent = a + "%";
       document.getElementById("wThermalVal").textContent = t + "%";
       document.getElementById("wDustVal").textContent = d + "%";
       document.getElementById("wSlopeVal").textContent = s + "%";
       document.getElementById("wMineralVal").textContent = m + "%";
-      const sum = Math.max(a + t + d + s + m, 1);
-      return { a: a / sum, t: t / sum, d: d / sum, s: s / sum, m: m / sum };
+      document.getElementById("wIsruVal").textContent = i + "%";
+      const sumA = Math.max(a + t + d + s + m + i, 1);
+
+      const orb = Number(document.getElementById("wOrbital").value);
+      const geo = Number(document.getElementById("wGeotech").value);
+      const wea = Number(document.getElementById("wWeather").value);
+      document.getElementById("wOrbitalVal").textContent = orb + "%";
+      document.getElementById("wGeotechVal").textContent = geo + "%";
+      document.getElementById("wWeatherVal").textContent = wea + "%";
+      const sumB = Math.max(orb + geo + wea, 1);
+
+      return {
+        shareA: shareA / 100,
+        shareB: shareB / 100,
+        a: a / sumA,
+        t: t / sumA,
+        d: d / sumA,
+        s: s / sumA,
+        m: m / sumA,
+        i: i / sumA,
+        orb: orb / sumB,
+        geo: geo / sumB,
+        wea: wea / sumB
+      };
     }
 
-    function scoreRecord(rec, target, w) {
+    function evaluateRecord(rec, target, w) {
+      // --- SUB-INDICE A: Similitud Planetaria ---
+      const morphNorm = 0.45 * rec.slope_norm + 0.30 * (rec.roughness_norm ?? rec.slope_norm) + 0.25 * (1 - (rec.regolith_norm ?? 0.8));
+      const idealMorph = 0.55 * target.ideal.slope + 0.45 * (target.ideal.roughness ?? target.ideal.slope);
+      const dS = Math.abs(morphNorm - idealMorph);
+
+      const profLower = rec.mineral_profile.toLowerCase();
+      const expLower = target.expected_mineral.toLowerCase();
+      let minMatch = profLower.includes(expLower) ? 1.0 : 0.52;
+      if (rec.basalt_olivine_norm >= 0.85) {
+        minMatch = Math.min(1.0, minMatch + 0.25);
+      }
+      const dM = Math.abs(minMatch - target.ideal.mineral);
+
       const dA = Math.abs(rec.aridity_norm - target.ideal.aridity);
       const dT = Math.abs(rec.thermal_norm - target.ideal.thermal);
       const dD = Math.abs(rec.dust_norm - target.ideal.dust);
-      const dS = Math.abs(rec.slope_norm - target.ideal.slope);
-      const minMatch = rec.mineral_profile.toLowerCase().includes(target.expected_mineral.toLowerCase()) ? 1.0 : 0.45;
-      const dM = Math.abs(minMatch - target.ideal.mineral);
 
-      const dist = Math.sqrt(w.a * dA * dA + w.t * dT * dT + w.d * dD * dD + w.s * dS * dS + w.m * dM * dM);
-      return Math.max(0, Math.round((1 - dist) * 1000) / 10);
+      const isruVal = rec.isru_norm ?? 0.65;
+      const dI = Math.abs(isruVal - (target.ideal.isru ?? 0.85));
+
+      const distA = Math.sqrt(
+        w.a * dA * dA +
+        w.t * dT * dT +
+        w.d * dD * dD +
+        w.s * dS * dS +
+        w.m * dM * dM +
+        w.i * dI * dI
+      );
+      const scoreA = Math.max(0, Math.round((1 - distA) * 1000) / 10);
+
+      // --- SUB-INDICE B: Viabilidad de Operaciones de Base y Despegue ---
+      const latFactor = target.body === "Moon"
+        ? (rec.orbital_polar_norm ?? 0.7)
+        : (rec.orbital_eq_norm ?? 0.75);
+      const orbScore = 0.45 * latFactor + 0.30 * (rec.elevation_norm ?? 0.6) + 0.25 * (rec.solar_norm ?? 0.7);
+      const geoScore = rec.geotech_stability_norm ?? 0.75;
+      const weaScore = rec.weather_window_norm ?? 0.75;
+
+      const rawB = w.orb * orbScore + w.geo * geoScore + w.wea * weaScore;
+      const scoreB = Math.max(0, Math.min(100, Math.round(rawB * 1000) / 10));
+
+      const totalScore = Math.round((w.shareA * scoreA + w.shareB * scoreB) * 10) / 10;
+      return { score: totalScore, scoreA, scoreB };
     }
 
     function colorForScore(score) {
-      if (score >= 88) return "#22c55e";
-      if (score >= 78) return "#38bdf8";
-      if (score >= 68) return "#f59e0b";
+      if (score >= 84) return "#22c55e";
+      if (score >= 75) return "#38bdf8";
+      if (score >= 66) return "#f59e0b";
       return "#ef4444";
+    }
+
+    function downloadKML5km2(rec, target) {
+      const [minLon, minLat, maxLon, maxLat] = rec.bbox_5km2 || [rec.lon - 0.01, rec.lat - 0.01, rec.lon + 0.01, rec.lat + 0.01];
+      const kml = `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>ARES 5km2 Sample - ${rec.basin_name}</name>
+    <Placemark>
+      <name>${rec.basin_name} (5.0 km² Analog Sector - ${rec.month_name})</name>
+      <description>Target: ${target.name} | Score Global: ${rec.score}% (Sub-A: ${rec.scoreA}%, Sub-B: ${rec.scoreB}%)</description>
+      <Style>
+        <LineStyle><color>ff0073f9</color><width>3</width></LineStyle>
+        <PolyStyle><color>44f8bd38</color></PolyStyle>
+      </Style>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              ${minLon},${minLat},0
+              ${maxLon},${minLat},0
+              ${maxLon},${maxLat},0
+              ${minLon},${maxLat},0
+              ${minLon},${minLat},0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>`;
+      const blob = new Blob([kml], { type: "application/vnd.google-earth.kml+xml" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${rec.basin_id}_5km2.kml`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function draw5km2Polygon(rec) {
+      polygon5kmLayer.clearLayers();
+      if (!rec || !rec.bbox_5km2) return;
+      const [minLon, minLat, maxLon, maxLat] = rec.bbox_5km2;
+      const bounds = [[minLat, minLon], [maxLat, maxLon]];
+      const rect = L.rectangle(bounds, {
+        color: "#f97316",
+        weight: 2.5,
+        fillColor: "#38bdf8",
+        fillOpacity: 0.22,
+        dashArray: "5, 4"
+      });
+      rect.bindTooltip(`Muestra de 5.0 km² (2.24 × 2.24 km): ${rec.basin_name}`, { sticky: true });
+      rect.addTo(polygon5kmLayer);
+    }
+
+    function renderBasinDetail(rec, target) {
+      const box = document.getElementById("basinDetailBox");
+      if (!rec) {
+        box.innerHTML = "";
+        return;
+      }
+      const slopeOk = rec.slope_deg < 5.0;
+      const geUrl = `https://earth.google.com/web/@${rec.lat},${rec.lon},${rec.elevation_m}a,4500d,35y,0h,0t,0r`;
+      const catLabel = CATEGORY_LABELS[rec.category] || "Terreno Análogo";
+
+      box.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px;">
+          <strong style="color:var(--accent);font-size:0.83rem;">Parcela 5.0 km²: ${rec.basin_name} (${rec.month_name})</strong>
+          <span class="sub-pill ${slopeOk ? 'ok' : 'warn'}">${slopeOk ? '✔ Plataforma <5° (' + rec.slope_deg + '°)' : '⚠ Pendiente ' + rec.slope_deg + '°'}</span>
+        </div>
+        <div style="font-size:0.71rem;color:#94a3b8;margin-top:2px;">
+          Categoría: <b style="color:#fdba74;">${catLabel}</b> · Muestra: <b>2.24 × 2.24 km (5.0 km²)</b> · Albedo MODIS: <b>${rec.albedo_wsa ?? 0.25}</b>
+        </div>
+        <div class="detail-grid">
+          <div class="metric-card">
+            <div class="m-title">A1. Regolito y Rugosidad</div>
+            <div class="m-val">TRI: ${rec.roughness_m ?? 0.5} m · ${rec.grain_size_um ?? 65} µm</div>
+          </div>
+          <div class="metric-card">
+            <div class="m-title">A3. Recursos ISRU / Subsuelo</div>
+            <div class="m-val">${rec.isru_resources ?? 'Salmueras'} (${Math.round((rec.isru_norm ?? 0.7)*100)}%)</div>
+          </div>
+          <div class="metric-card">
+            <div class="m-title">B1. Geometría Orbital</div>
+            <div class="m-val">Lat ${rec.lat}° · Elev ${rec.elevation_m} m · ${rec.solar_kwh_m2_day} kWh/m²</div>
+          </div>
+          <div class="metric-card">
+            <div class="m-title">B3. Ventana Despegue</div>
+            <div class="m-val">Viento ${rec.wind_ms} m/s (Ráf. ${rec.wind_gust_ms ?? '-'} m/s) · Nubes ${rec.cloud_cover_pct ?? '-'}%</div>
+          </div>
+        </div>
+        <div class="limits-box">
+          <b>Pruebas Recomendadas:</b> ${target.recommended_tests || 'Pruebas de movilidad y sensores.'}<br/>
+          <b>Límites del Análogo Terrestre:</b> ${target.earth_limits || 'Diferencia de gravedad, presión atmosférica y radiación.'}
+        </div>
+        <div class="btn-row">
+          <a class="action-btn" href="${geUrl}" target="_blank" rel="noopener">🌍 Ver 5 km² en Google Earth</a>
+          <button class="action-btn" id="btnExportKml">📥 Exportar Polígono 5 km² (.KML)</button>
+          <button class="action-btn" id="btnZoom5km">🔍 Zoom a Parcela 5 km²</button>
+        </div>
+      `;
+
+      document.getElementById("btnExportKml").onclick = () => downloadKML5km2(rec, target);
+      document.getElementById("btnZoom5km").onclick = () => {
+        if (rec.bbox_5km2) {
+          const [minLon, minLat, maxLon, maxLat] = rec.bbox_5km2;
+          map.fitBounds([[minLat, minLon], [maxLat, maxLon]], { maxZoom: 14, padding: [30, 30] });
+        } else {
+          map.setView([rec.lat, rec.lon], 13);
+        }
+      };
     }
 
     function renderChart(basinId, target, w) {
@@ -236,10 +519,12 @@
         .sort((a, b) => a.month - b.month);
       if (!rows.length) return;
 
-      document.getElementById("chartTitle").textContent = `Perfil Temporal: ${rows[0].basin_name}`;
+      document.getElementById("chartTitle").textContent = `Perfil Temporal (12 Meses): ${rows[0].basin_name}`;
       const labels = rows.map(r => r.month_name);
-      const scores = rows.map(r => scoreRecord(r, target, w));
-      const dtr = rows.map(r => r.diurnal_temp_range_c);
+      const evals = rows.map(r => evaluateRecord(r, target, w));
+      const scoresTotal = evals.map(e => e.score);
+      const scoresA = evals.map(e => e.scoreA);
+      const scoresB = evals.map(e => e.scoreB);
 
       if (chartInstance) chartInstance.destroy();
       const ctx = document.getElementById("seasonalChart").getContext("2d");
@@ -249,30 +534,37 @@
           labels,
           datasets: [
             {
-              label: "Similitud Planetaria (%)",
-              data: scores,
-              borderColor: "#38bdf8",
-              backgroundColor: "rgba(56,189,248,0.15)",
-              yAxisID: "y",
+              label: "Índice Global (%)",
+              data: scoresTotal,
+              borderColor: "#f8fafc",
+              backgroundColor: "rgba(248,250,252,0.08)",
+              borderWidth: 2.5,
               tension: 0.3,
               fill: true
             },
             {
-              label: "Rango Termico Diurno (°C)",
-              data: dtr,
-              borderColor: "#f97316",
-              yAxisID: "y1",
+              label: "Sub-Índice A: Similitud (%)",
+              data: scoresA,
+              borderColor: "#38bdf8",
+              borderDash: [4, 3],
+              borderWidth: 1.8,
+              tension: 0.3
+            },
+            {
+              label: "Sub-Índice B: Operaciones (%)",
+              data: scoresB,
+              borderColor: "#10b981",
+              borderWidth: 1.8,
               tension: 0.3
             }
           ]
         },
         options: {
           responsive: true,
-          plugins: { legend: { labels: { color: "#cbd5e1", font: { size: 11 } } } },
+          plugins: { legend: { labels: { color: "#cbd5e1", font: { size: 10.5 } } } },
           scales: {
-            x: { ticks: { color: "#94a3b8" } },
-            y: { position: "left", min: 40, max: 100, ticks: { color: "#38bdf8" } },
-            y1: { position: "right", grid: { drawOnChartArea: false }, ticks: { color: "#f97316" } }
+            x: { ticks: { color: "#94a3b8", font: { size: 10 } } },
+            y: { position: "left", min: 35, max: 100, ticks: { color: "#cbd5e1" } }
           }
         }
       });
@@ -283,8 +575,17 @@
       document.getElementById("targetDesc").textContent = target.description;
       const w = getWeights();
       const monthFilter = document.getElementById("monthFilter").value;
+      const categoryFilter = document.getElementById("categoryFilter").value;
 
-      const scored = DATA.records.map(r => ({ ...r, score: scoreRecord(r, target, w) }));
+      let pool = DATA.records;
+      if (categoryFilter !== "ALL") {
+        pool = pool.filter(r => r.category === categoryFilter);
+      }
+
+      const scored = pool.map(r => {
+        const ev = evaluateRecord(r, target, w);
+        return { ...r, ...ev };
+      });
 
       let displayed = [];
       if (monthFilter === "BEST") {
@@ -300,28 +601,33 @@
       }
 
       displayed.sort((a, b) => b.score - a.score);
-      if (!selectedBasinId && displayed.length) selectedBasinId = displayed[0].basin_id;
+      if (!selectedBasinId || !displayed.some(r => r.basin_id === selectedBasinId)) {
+        selectedBasinId = displayed.length ? displayed[0].basin_id : null;
+      }
 
       markersLayer.clearLayers();
       displayed.forEach(r => {
         const col = colorForScore(r.score);
         const marker = L.circleMarker([r.lat, r.lon], {
-          radius: r.basin_id === selectedBasinId ? 10 : 7,
+          radius: r.basin_id === selectedBasinId ? 10 : 6.5,
           fillColor: col,
           color: "#0b0f19",
           weight: 1.5,
-          fillOpacity: 0.9
+          fillOpacity: 0.92
         });
+        const catLabel = CATEGORY_LABELS[r.category] || r.category;
         marker.bindPopup(`
-          <b>${r.basin_name}</b> (${r.month_name})<br/>
-          Similitud: <b>${r.score}%</b><br/>
-          ΔT Diurno: ${r.diurnal_temp_range_c} °C | Lluvia: ${r.precip_mm} mm<br/>
-          Elev: ${r.elevation_m} m | Pendiente: ${r.slope_deg}°<br/>
-          Mineralogia: ${r.mineral_profile}
+          <b>${r.basin_name}</b> (${r.month_name}) · <span style="color:#fdba74;">${catLabel} (5.0 km²)</span><br/>
+          Índice Global: <b>${r.score}%</b> (Sub-A: <b>${r.scoreA}%</b> | Sub-B: <b>${r.scoreB}%</b>)<br/>
+          <b>A1 Morfología/Regolito:</b> Pend ${r.slope_deg}° | Rugosidad ${r.roughness_m} m | ${r.granulometry_class}<br/>
+          <b>A1 Mineralogía:</b> ${r.mineral_profile}<br/>
+          <b>A2 Extremos:</b> ΔT ${r.diurnal_temp_range_c}°C | Lluvia ${r.precip_mm} mm | Viento ${r.wind_ms} m/s<br/>
+          <b>A3 ISRU/Subsuelo:</b> ${r.isru_resources}<br/>
+          <b>B Operaciones/Despegue:</b> Elev ${r.elevation_m} m | Ráfagas ${r.wind_gust_ms} m/s | Nubes ${r.cloud_cover_pct}%
         `);
         marker.on("click", () => {
           selectedBasinId = r.basin_id;
-          renderChart(selectedBasinId, target, w);
+          updateDashboard();
         });
         marker.addTo(markersLayer);
       });
@@ -331,39 +637,58 @@
       displayed.slice(0, 6).forEach((r, idx) => {
         const div = document.createElement("div");
         div.className = "rank-item" + (r.basin_id === selectedBasinId ? " active" : "");
+        const slopeBadge = r.slope_deg < 5 ? `<span class="sub-pill ok">Plat &lt;5° (${r.slope_deg}°)</span>` : `<span class="sub-pill warn">Pend ${r.slope_deg}°</span>`;
+        const catLabel = CATEGORY_LABELS[r.category] || "Análogo";
         div.innerHTML = `
           <div class="rank-top">
             <span>#${idx + 1} ${r.basin_name}</span>
             <span class="score-pill">${r.score}% · ${r.month_name}</span>
           </div>
+          <div class="sub-pills">
+            <span class="sub-pill cat">${catLabel}</span>
+            <span class="sub-pill a">Sub-A: ${r.scoreA}%</span>
+            <span class="sub-pill b">Sub-B: ${r.scoreB}%</span>
+            ${slopeBadge}
+          </div>
           <div class="rank-meta">
-            ΔT: ${r.diurnal_temp_range_c}°C · Lluvia: ${r.precip_mm}mm · Pend: ${r.slope_deg}° · ${r.mineral_profile.split(" (")[0]}
+            5.0 km² · ΔT: ${r.diurnal_temp_range_c}°C · Ráf: ${r.wind_gust_ms}m/s · ${r.mineral_profile.split(" (")[0]}
           </div>
         `;
         div.onclick = () => {
           selectedBasinId = r.basin_id;
-          map.setView([r.lat, r.lon], 5);
-          renderChart(selectedBasinId, target, w);
+          map.setView([r.lat, r.lon], 12);
           updateDashboard();
         };
         lb.appendChild(div);
       });
 
-      renderChart(selectedBasinId, target, w);
+      const activeRec = displayed.find(r => r.basin_id === selectedBasinId) || displayed[0];
+      draw5km2Polygon(activeRec);
+      renderBasinDetail(activeRec, target);
+      if (selectedBasinId) renderChart(selectedBasinId, target, w);
     }
 
     targetSelect.addEventListener("change", () => {
       const t = DATA.targets.find(x => x.id === targetSelect.value);
+      document.getElementById("wSubindexA").value = Math.round((t.weights.subindex_a_share ?? 0.65) * 100);
       document.getElementById("wAridity").value = Math.round(t.weights.aridity * 100);
       document.getElementById("wThermal").value = Math.round(t.weights.thermal * 100);
       document.getElementById("wDust").value = Math.round(t.weights.dust * 100);
       document.getElementById("wSlope").value = Math.round(t.weights.slope * 100);
       document.getElementById("wMineral").value = Math.round(t.weights.mineral * 100);
+      document.getElementById("wIsru").value = Math.round((t.weights.isru ?? 0.12) * 100);
+      document.getElementById("wOrbital").value = Math.round((t.weights.orbital ?? 0.30) * 100);
+      document.getElementById("wGeotech").value = Math.round((t.weights.geotech ?? 0.35) * 100);
+      document.getElementById("wWeather").value = Math.round((t.weights.weather ?? 0.35) * 100);
       selectedBasinId = null;
       updateDashboard();
     });
 
-    ["monthFilter", "wAridity", "wThermal", "wDust", "wSlope", "wMineral"].forEach(id => {
+    [
+      "monthFilter", "categoryFilter", "wSubindexA",
+      "wAridity", "wThermal", "wDust", "wSlope", "wMineral", "wIsru",
+      "wOrbital", "wGeotech", "wWeather"
+    ].forEach(id => {
       document.getElementById(id).addEventListener("input", updateDashboard);
     });
 

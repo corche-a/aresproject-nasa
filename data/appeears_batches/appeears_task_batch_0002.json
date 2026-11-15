@@ -1,0 +1,6036 @@
+{
+  "task_type": "point",
+  "task_name": "ARES_Global_5km2_Batch_0002",
+  "params": {
+    "dates": [
+      {
+        "startDate": "01-01-2023",
+        "endDate": "12-31-2024"
+      }
+    ],
+    "layers": [
+      {
+        "product": "EMITL2BMIN.001",
+        "layer": "group_1_band_depth"
+      },
+      {
+        "product": "MOD11A2.061",
+        "layer": "LST_Day_1km"
+      },
+      {
+        "product": "MOD11A2.061",
+        "layer": "LST_Night_1km"
+      },
+      {
+        "product": "MCD43A3.061",
+        "layer": "Albedo_WSA_shortwave"
+      },
+      {
+        "product": "NASADEM_NC.001",
+        "layer": "NASADEM_HGT"
+      }
+    ],
+    "coordinates": [
+      {
+        "id": "C5K_0001001",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": -1.02224
+      },
+      {
+        "id": "C5K_0001002",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": -0.5889
+      },
+      {
+        "id": "C5K_0001003",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": -0.15555
+      },
+      {
+        "id": "C5K_0001004",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": 0.27779
+      },
+      {
+        "id": "C5K_0001005",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": 0.71114
+      },
+      {
+        "id": "C5K_0001006",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": 1.14448
+      },
+      {
+        "id": "C5K_0001007",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": 1.57783
+      },
+      {
+        "id": "C5K_0001008",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": 2.01117
+      },
+      {
+        "id": "C5K_0001009",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": 2.44451
+      },
+      {
+        "id": "C5K_0001010",
+        "category": "arid_desert",
+        "latitude": 22.01873,
+        "longitude": 2.87786
+      },
+      {
+        "id": "C5K_0001011",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -10.98914
+      },
+      {
+        "id": "C5K_0001012",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -10.55455
+      },
+      {
+        "id": "C5K_0001013",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -10.11996
+      },
+      {
+        "id": "C5K_0001014",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -9.68537
+      },
+      {
+        "id": "C5K_0001015",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -9.25079
+      },
+      {
+        "id": "C5K_0001016",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -8.8162
+      },
+      {
+        "id": "C5K_0001017",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -8.38161
+      },
+      {
+        "id": "C5K_0001018",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -7.94702
+      },
+      {
+        "id": "C5K_0001019",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -7.51244
+      },
+      {
+        "id": "C5K_0001020",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -7.07785
+      },
+      {
+        "id": "C5K_0001021",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -6.64326
+      },
+      {
+        "id": "C5K_0001022",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -6.20867
+      },
+      {
+        "id": "C5K_0001023",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -5.77409
+      },
+      {
+        "id": "C5K_0001024",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -5.3395
+      },
+      {
+        "id": "C5K_0001025",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -4.90491
+      },
+      {
+        "id": "C5K_0001026",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -4.47032
+      },
+      {
+        "id": "C5K_0001027",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -4.03574
+      },
+      {
+        "id": "C5K_0001028",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -3.60115
+      },
+      {
+        "id": "C5K_0001029",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -3.16656
+      },
+      {
+        "id": "C5K_0001030",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -2.73197
+      },
+      {
+        "id": "C5K_0001031",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -2.29739
+      },
+      {
+        "id": "C5K_0001032",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -1.8628
+      },
+      {
+        "id": "C5K_0001033",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -1.42821
+      },
+      {
+        "id": "C5K_0001034",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -0.99362
+      },
+      {
+        "id": "C5K_0001035",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -0.55904
+      },
+      {
+        "id": "C5K_0001036",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": -0.12445
+      },
+      {
+        "id": "C5K_0001037",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": 0.31014
+      },
+      {
+        "id": "C5K_0001038",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": 0.74473
+      },
+      {
+        "id": "C5K_0001039",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": 1.17931
+      },
+      {
+        "id": "C5K_0001040",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": 1.6139
+      },
+      {
+        "id": "C5K_0001041",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": 2.04849
+      },
+      {
+        "id": "C5K_0001042",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": 2.48308
+      },
+      {
+        "id": "C5K_0001043",
+        "category": "arid_desert",
+        "latitude": 22.42047,
+        "longitude": 2.91766
+      },
+      {
+        "id": "C5K_0001044",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -10.9891
+      },
+      {
+        "id": "C5K_0001045",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -10.55324
+      },
+      {
+        "id": "C5K_0001046",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -10.11739
+      },
+      {
+        "id": "C5K_0001047",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -9.68153
+      },
+      {
+        "id": "C5K_0001048",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -9.24567
+      },
+      {
+        "id": "C5K_0001049",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -8.80981
+      },
+      {
+        "id": "C5K_0001050",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -8.37395
+      },
+      {
+        "id": "C5K_0001051",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -7.93809
+      },
+      {
+        "id": "C5K_0001052",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -7.50223
+      },
+      {
+        "id": "C5K_0001053",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -7.06637
+      },
+      {
+        "id": "C5K_0001054",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -6.63051
+      },
+      {
+        "id": "C5K_0001055",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -6.19465
+      },
+      {
+        "id": "C5K_0001056",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -5.75879
+      },
+      {
+        "id": "C5K_0001057",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -5.32294
+      },
+      {
+        "id": "C5K_0001058",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -4.88708
+      },
+      {
+        "id": "C5K_0001059",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -4.45122
+      },
+      {
+        "id": "C5K_0001060",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -4.01536
+      },
+      {
+        "id": "C5K_0001061",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -3.5795
+      },
+      {
+        "id": "C5K_0001062",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -3.14364
+      },
+      {
+        "id": "C5K_0001063",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -2.70778
+      },
+      {
+        "id": "C5K_0001064",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -2.27192
+      },
+      {
+        "id": "C5K_0001065",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -1.83606
+      },
+      {
+        "id": "C5K_0001066",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -1.4002
+      },
+      {
+        "id": "C5K_0001067",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -0.96434
+      },
+      {
+        "id": "C5K_0001068",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -0.52848
+      },
+      {
+        "id": "C5K_0001069",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": -0.09263
+      },
+      {
+        "id": "C5K_0001070",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": 0.34323
+      },
+      {
+        "id": "C5K_0001071",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": 0.77909
+      },
+      {
+        "id": "C5K_0001072",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": 1.21495
+      },
+      {
+        "id": "C5K_0001073",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": 1.65081
+      },
+      {
+        "id": "C5K_0001074",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": 2.08667
+      },
+      {
+        "id": "C5K_0001075",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": 2.52253
+      },
+      {
+        "id": "C5K_0001076",
+        "category": "arid_desert",
+        "latitude": 22.8222,
+        "longitude": 2.95839
+      },
+      {
+        "id": "C5K_0001077",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -10.98907
+      },
+      {
+        "id": "C5K_0001078",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -10.55191
+      },
+      {
+        "id": "C5K_0001079",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -10.11475
+      },
+      {
+        "id": "C5K_0001080",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -9.67759
+      },
+      {
+        "id": "C5K_0001081",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -9.24043
+      },
+      {
+        "id": "C5K_0001082",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -8.80327
+      },
+      {
+        "id": "C5K_0001083",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -8.36611
+      },
+      {
+        "id": "C5K_0001084",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -7.92895
+      },
+      {
+        "id": "C5K_0001085",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -7.49179
+      },
+      {
+        "id": "C5K_0001086",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -7.05463
+      },
+      {
+        "id": "C5K_0001087",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -6.61747
+      },
+      {
+        "id": "C5K_0001088",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -6.18031
+      },
+      {
+        "id": "C5K_0001089",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -5.74315
+      },
+      {
+        "id": "C5K_0001090",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -5.30599
+      },
+      {
+        "id": "C5K_0001091",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -4.86883
+      },
+      {
+        "id": "C5K_0001092",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -4.43168
+      },
+      {
+        "id": "C5K_0001093",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -3.99452
+      },
+      {
+        "id": "C5K_0001094",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -3.55736
+      },
+      {
+        "id": "C5K_0001095",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -3.1202
+      },
+      {
+        "id": "C5K_0001096",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -2.68304
+      },
+      {
+        "id": "C5K_0001097",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -2.24588
+      },
+      {
+        "id": "C5K_0001098",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -1.80872
+      },
+      {
+        "id": "C5K_0001099",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -1.37156
+      },
+      {
+        "id": "C5K_0001100",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -0.9344
+      },
+      {
+        "id": "C5K_0001101",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -0.49724
+      },
+      {
+        "id": "C5K_0001102",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": -0.06008
+      },
+      {
+        "id": "C5K_0001103",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": 0.37708
+      },
+      {
+        "id": "C5K_0001104",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": 0.81424
+      },
+      {
+        "id": "C5K_0001105",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": 1.2514
+      },
+      {
+        "id": "C5K_0001106",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": 1.68856
+      },
+      {
+        "id": "C5K_0001107",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": 2.12572
+      },
+      {
+        "id": "C5K_0001108",
+        "category": "arid_desert",
+        "latitude": 23.22394,
+        "longitude": 2.56288
+      },
+      {
+        "id": "C5K_0001109",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -10.98904
+      },
+      {
+        "id": "C5K_0001110",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -10.55055
+      },
+      {
+        "id": "C5K_0001111",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -10.11206
+      },
+      {
+        "id": "C5K_0001112",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -9.67357
+      },
+      {
+        "id": "C5K_0001113",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -9.23508
+      },
+      {
+        "id": "C5K_0001114",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -8.79659
+      },
+      {
+        "id": "C5K_0001115",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -8.3581
+      },
+      {
+        "id": "C5K_0001116",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -7.91961
+      },
+      {
+        "id": "C5K_0001117",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -7.48112
+      },
+      {
+        "id": "C5K_0001118",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -7.04263
+      },
+      {
+        "id": "C5K_0001119",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -6.60414
+      },
+      {
+        "id": "C5K_0001120",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -6.16565
+      },
+      {
+        "id": "C5K_0001121",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -5.72716
+      },
+      {
+        "id": "C5K_0001122",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -5.28867
+      },
+      {
+        "id": "C5K_0001123",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -4.85018
+      },
+      {
+        "id": "C5K_0001124",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -4.41169
+      },
+      {
+        "id": "C5K_0001125",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -3.9732
+      },
+      {
+        "id": "C5K_0001126",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -3.53471
+      },
+      {
+        "id": "C5K_0001127",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -3.09622
+      },
+      {
+        "id": "C5K_0001128",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -2.65773
+      },
+      {
+        "id": "C5K_0001129",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -2.21924
+      },
+      {
+        "id": "C5K_0001130",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -1.78075
+      },
+      {
+        "id": "C5K_0001131",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -1.34226
+      },
+      {
+        "id": "C5K_0001132",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -0.90377
+      },
+      {
+        "id": "C5K_0001133",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -0.46528
+      },
+      {
+        "id": "C5K_0001134",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": -0.02679
+      },
+      {
+        "id": "C5K_0001135",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": 0.4117
+      },
+      {
+        "id": "C5K_0001136",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": 0.85019
+      },
+      {
+        "id": "C5K_0001137",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": 1.28868
+      },
+      {
+        "id": "C5K_0001138",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": 1.72717
+      },
+      {
+        "id": "C5K_0001139",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": 2.16566
+      },
+      {
+        "id": "C5K_0001140",
+        "category": "arid_desert",
+        "latitude": 23.62568,
+        "longitude": 2.60415
+      },
+      {
+        "id": "C5K_0001141",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -10.989
+      },
+      {
+        "id": "C5K_0001142",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -10.54915
+      },
+      {
+        "id": "C5K_0001143",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -10.1093
+      },
+      {
+        "id": "C5K_0001144",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -9.66945
+      },
+      {
+        "id": "C5K_0001145",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -9.22961
+      },
+      {
+        "id": "C5K_0001146",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -8.78976
+      },
+      {
+        "id": "C5K_0001147",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -8.34991
+      },
+      {
+        "id": "C5K_0001148",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -7.91006
+      },
+      {
+        "id": "C5K_0001149",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -7.47021
+      },
+      {
+        "id": "C5K_0001150",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -7.03036
+      },
+      {
+        "id": "C5K_0001151",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -6.59051
+      },
+      {
+        "id": "C5K_0001152",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -6.15066
+      },
+      {
+        "id": "C5K_0001153",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -5.71081
+      },
+      {
+        "id": "C5K_0001154",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -5.27096
+      },
+      {
+        "id": "C5K_0001155",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -4.83111
+      },
+      {
+        "id": "C5K_0001156",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -4.39126
+      },
+      {
+        "id": "C5K_0001157",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -3.95141
+      },
+      {
+        "id": "C5K_0001158",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -3.51156
+      },
+      {
+        "id": "C5K_0001159",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -3.07171
+      },
+      {
+        "id": "C5K_0001160",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -2.63186
+      },
+      {
+        "id": "C5K_0001161",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -2.19201
+      },
+      {
+        "id": "C5K_0001162",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -1.75216
+      },
+      {
+        "id": "C5K_0001163",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -1.31231
+      },
+      {
+        "id": "C5K_0001164",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -0.87246
+      },
+      {
+        "id": "C5K_0001165",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": -0.43261
+      },
+      {
+        "id": "C5K_0001166",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": 0.00724
+      },
+      {
+        "id": "C5K_0001167",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": 0.44709
+      },
+      {
+        "id": "C5K_0001168",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": 0.88694
+      },
+      {
+        "id": "C5K_0001169",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": 1.32679
+      },
+      {
+        "id": "C5K_0001170",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": 1.76663
+      },
+      {
+        "id": "C5K_0001171",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": 2.20648
+      },
+      {
+        "id": "C5K_0001172",
+        "category": "arid_desert",
+        "latitude": 24.02741,
+        "longitude": 2.64633
+      },
+      {
+        "id": "C5K_0001173",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -10.98897
+      },
+      {
+        "id": "C5K_0001174",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -10.54773
+      },
+      {
+        "id": "C5K_0001175",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -10.10649
+      },
+      {
+        "id": "C5K_0001176",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -9.66525
+      },
+      {
+        "id": "C5K_0001177",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -9.22401
+      },
+      {
+        "id": "C5K_0001178",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -8.78277
+      },
+      {
+        "id": "C5K_0001179",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -8.34153
+      },
+      {
+        "id": "C5K_0001180",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -7.90029
+      },
+      {
+        "id": "C5K_0001181",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -7.45905
+      },
+      {
+        "id": "C5K_0001182",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -7.01781
+      },
+      {
+        "id": "C5K_0001183",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -6.57657
+      },
+      {
+        "id": "C5K_0001184",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -6.13533
+      },
+      {
+        "id": "C5K_0001185",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -5.69409
+      },
+      {
+        "id": "C5K_0001186",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -5.25285
+      },
+      {
+        "id": "C5K_0001187",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -4.81161
+      },
+      {
+        "id": "C5K_0001188",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -4.37037
+      },
+      {
+        "id": "C5K_0001189",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -3.92913
+      },
+      {
+        "id": "C5K_0001190",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -3.48789
+      },
+      {
+        "id": "C5K_0001191",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -3.04665
+      },
+      {
+        "id": "C5K_0001192",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -2.60542
+      },
+      {
+        "id": "C5K_0001193",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -2.16418
+      },
+      {
+        "id": "C5K_0001194",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -1.72294
+      },
+      {
+        "id": "C5K_0001195",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -1.2817
+      },
+      {
+        "id": "C5K_0001196",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -0.84046
+      },
+      {
+        "id": "C5K_0001197",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": -0.39922
+      },
+      {
+        "id": "C5K_0001198",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": 0.04202
+      },
+      {
+        "id": "C5K_0001199",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": 0.48326
+      },
+      {
+        "id": "C5K_0001200",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": 0.9245
+      },
+      {
+        "id": "C5K_0001201",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": 1.36574
+      },
+      {
+        "id": "C5K_0001202",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": 1.80698
+      },
+      {
+        "id": "C5K_0001203",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": 2.24822
+      },
+      {
+        "id": "C5K_0001204",
+        "category": "arid_desert",
+        "latitude": 24.42915,
+        "longitude": 2.68946
+      },
+      {
+        "id": "C5K_0001205",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -10.98893
+      },
+      {
+        "id": "C5K_0001206",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -10.54627
+      },
+      {
+        "id": "C5K_0001207",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -10.10361
+      },
+      {
+        "id": "C5K_0001208",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -9.66095
+      },
+      {
+        "id": "C5K_0001209",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -9.21829
+      },
+      {
+        "id": "C5K_0001210",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -8.77563
+      },
+      {
+        "id": "C5K_0001211",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -8.33297
+      },
+      {
+        "id": "C5K_0001212",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -7.89031
+      },
+      {
+        "id": "C5K_0001213",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -7.44765
+      },
+      {
+        "id": "C5K_0001214",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -7.00499
+      },
+      {
+        "id": "C5K_0001215",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -6.56233
+      },
+      {
+        "id": "C5K_0001216",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -6.11967
+      },
+      {
+        "id": "C5K_0001217",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -5.67701
+      },
+      {
+        "id": "C5K_0001218",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -5.23435
+      },
+      {
+        "id": "C5K_0001219",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -4.79169
+      },
+      {
+        "id": "C5K_0001220",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -4.34903
+      },
+      {
+        "id": "C5K_0001221",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -3.90637
+      },
+      {
+        "id": "C5K_0001222",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -3.46371
+      },
+      {
+        "id": "C5K_0001223",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -3.02105
+      },
+      {
+        "id": "C5K_0001224",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -2.57839
+      },
+      {
+        "id": "C5K_0001225",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -2.13573
+      },
+      {
+        "id": "C5K_0001226",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -1.69307
+      },
+      {
+        "id": "C5K_0001227",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -1.25041
+      },
+      {
+        "id": "C5K_0001228",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -0.80774
+      },
+      {
+        "id": "C5K_0001229",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": -0.36508
+      },
+      {
+        "id": "C5K_0001230",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": 0.07758
+      },
+      {
+        "id": "C5K_0001231",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": 0.52024
+      },
+      {
+        "id": "C5K_0001232",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": 0.9629
+      },
+      {
+        "id": "C5K_0001233",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": 1.40556
+      },
+      {
+        "id": "C5K_0001234",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": 1.84822
+      },
+      {
+        "id": "C5K_0001235",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": 2.29088
+      },
+      {
+        "id": "C5K_0001236",
+        "category": "arid_desert",
+        "latitude": 24.83089,
+        "longitude": 2.73354
+      },
+      {
+        "id": "C5K_0001237",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -10.9889
+      },
+      {
+        "id": "C5K_0001238",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -10.54479
+      },
+      {
+        "id": "C5K_0001239",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -10.10067
+      },
+      {
+        "id": "C5K_0001240",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -9.65656
+      },
+      {
+        "id": "C5K_0001241",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -9.21245
+      },
+      {
+        "id": "C5K_0001242",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -8.76834
+      },
+      {
+        "id": "C5K_0001243",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -8.32422
+      },
+      {
+        "id": "C5K_0001244",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -7.88011
+      },
+      {
+        "id": "C5K_0001245",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -7.436
+      },
+      {
+        "id": "C5K_0001246",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -6.99189
+      },
+      {
+        "id": "C5K_0001247",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -6.54778
+      },
+      {
+        "id": "C5K_0001248",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -6.10366
+      },
+      {
+        "id": "C5K_0001249",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -5.65955
+      },
+      {
+        "id": "C5K_0001250",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -5.21544
+      },
+      {
+        "id": "C5K_0001251",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -4.77133
+      },
+      {
+        "id": "C5K_0001252",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -4.32721
+      },
+      {
+        "id": "C5K_0001253",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -3.8831
+      },
+      {
+        "id": "C5K_0001254",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -3.43899
+      },
+      {
+        "id": "C5K_0001255",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -2.99488
+      },
+      {
+        "id": "C5K_0001256",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -2.55077
+      },
+      {
+        "id": "C5K_0001257",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -2.10665
+      },
+      {
+        "id": "C5K_0001258",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -1.66254
+      },
+      {
+        "id": "C5K_0001259",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -1.21843
+      },
+      {
+        "id": "C5K_0001260",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -0.77432
+      },
+      {
+        "id": "C5K_0001261",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": -0.33021
+      },
+      {
+        "id": "C5K_0001262",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": 0.11391
+      },
+      {
+        "id": "C5K_0001263",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": 0.55802
+      },
+      {
+        "id": "C5K_0001264",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": 1.00213
+      },
+      {
+        "id": "C5K_0001265",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": 1.44624
+      },
+      {
+        "id": "C5K_0001266",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": 1.89036
+      },
+      {
+        "id": "C5K_0001267",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": 2.33447
+      },
+      {
+        "id": "C5K_0001268",
+        "category": "arid_desert",
+        "latitude": 25.23262,
+        "longitude": 2.77858
+      },
+      {
+        "id": "C5K_0001269",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -10.98886
+      },
+      {
+        "id": "C5K_0001270",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -10.54326
+      },
+      {
+        "id": "C5K_0001271",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -10.09767
+      },
+      {
+        "id": "C5K_0001272",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -9.65207
+      },
+      {
+        "id": "C5K_0001273",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -9.20648
+      },
+      {
+        "id": "C5K_0001274",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -8.76088
+      },
+      {
+        "id": "C5K_0001275",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -8.31529
+      },
+      {
+        "id": "C5K_0001276",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -7.86969
+      },
+      {
+        "id": "C5K_0001277",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -7.4241
+      },
+      {
+        "id": "C5K_0001278",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -6.9785
+      },
+      {
+        "id": "C5K_0001279",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -6.53291
+      },
+      {
+        "id": "C5K_0001280",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -6.08731
+      },
+      {
+        "id": "C5K_0001281",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -5.64171
+      },
+      {
+        "id": "C5K_0001282",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -5.19612
+      },
+      {
+        "id": "C5K_0001283",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -4.75052
+      },
+      {
+        "id": "C5K_0001284",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -4.30493
+      },
+      {
+        "id": "C5K_0001285",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -3.85933
+      },
+      {
+        "id": "C5K_0001286",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -3.41374
+      },
+      {
+        "id": "C5K_0001287",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -2.96814
+      },
+      {
+        "id": "C5K_0001288",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -2.52255
+      },
+      {
+        "id": "C5K_0001289",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -2.07695
+      },
+      {
+        "id": "C5K_0001290",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -1.63135
+      },
+      {
+        "id": "C5K_0001291",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -1.18576
+      },
+      {
+        "id": "C5K_0001292",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -0.74016
+      },
+      {
+        "id": "C5K_0001293",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": -0.29457
+      },
+      {
+        "id": "C5K_0001294",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": 0.15103
+      },
+      {
+        "id": "C5K_0001295",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": 0.59662
+      },
+      {
+        "id": "C5K_0001296",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": 1.04222
+      },
+      {
+        "id": "C5K_0001297",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": 1.48781
+      },
+      {
+        "id": "C5K_0001298",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": 1.93341
+      },
+      {
+        "id": "C5K_0001299",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": 2.379
+      },
+      {
+        "id": "C5K_0001300",
+        "category": "arid_desert",
+        "latitude": 25.63436,
+        "longitude": 2.8246
+      },
+      {
+        "id": "C5K_0001301",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -10.98882
+      },
+      {
+        "id": "C5K_0001302",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -10.54171
+      },
+      {
+        "id": "C5K_0001303",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -10.0946
+      },
+      {
+        "id": "C5K_0001304",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -9.64749
+      },
+      {
+        "id": "C5K_0001305",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -9.20038
+      },
+      {
+        "id": "C5K_0001306",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -8.75327
+      },
+      {
+        "id": "C5K_0001307",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -8.30616
+      },
+      {
+        "id": "C5K_0001308",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -7.85905
+      },
+      {
+        "id": "C5K_0001309",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -7.41194
+      },
+      {
+        "id": "C5K_0001310",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -6.96482
+      },
+      {
+        "id": "C5K_0001311",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -6.51771
+      },
+      {
+        "id": "C5K_0001312",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -6.0706
+      },
+      {
+        "id": "C5K_0001313",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -5.62349
+      },
+      {
+        "id": "C5K_0001314",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -5.17638
+      },
+      {
+        "id": "C5K_0001315",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -4.72927
+      },
+      {
+        "id": "C5K_0001316",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -4.28216
+      },
+      {
+        "id": "C5K_0001317",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -3.83505
+      },
+      {
+        "id": "C5K_0001318",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -3.38794
+      },
+      {
+        "id": "C5K_0001319",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -2.94083
+      },
+      {
+        "id": "C5K_0001320",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -2.49372
+      },
+      {
+        "id": "C5K_0001321",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -2.04661
+      },
+      {
+        "id": "C5K_0001322",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -1.5995
+      },
+      {
+        "id": "C5K_0001323",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -1.15238
+      },
+      {
+        "id": "C5K_0001324",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -0.70527
+      },
+      {
+        "id": "C5K_0001325",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": -0.25816
+      },
+      {
+        "id": "C5K_0001326",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": 0.18895
+      },
+      {
+        "id": "C5K_0001327",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": 0.63606
+      },
+      {
+        "id": "C5K_0001328",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": 1.08317
+      },
+      {
+        "id": "C5K_0001329",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": 1.53028
+      },
+      {
+        "id": "C5K_0001330",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": 1.97739
+      },
+      {
+        "id": "C5K_0001331",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": 2.4245
+      },
+      {
+        "id": "C5K_0001332",
+        "category": "arid_desert",
+        "latitude": 26.0361,
+        "longitude": 2.87161
+      },
+      {
+        "id": "C5K_0001333",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -10.98878
+      },
+      {
+        "id": "C5K_0001334",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -10.54012
+      },
+      {
+        "id": "C5K_0001335",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -10.09147
+      },
+      {
+        "id": "C5K_0001336",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -9.64281
+      },
+      {
+        "id": "C5K_0001337",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -9.19415
+      },
+      {
+        "id": "C5K_0001338",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -8.74549
+      },
+      {
+        "id": "C5K_0001339",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -8.29683
+      },
+      {
+        "id": "C5K_0001340",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -7.84817
+      },
+      {
+        "id": "C5K_0001341",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -7.39951
+      },
+      {
+        "id": "C5K_0001342",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -6.95086
+      },
+      {
+        "id": "C5K_0001343",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -6.5022
+      },
+      {
+        "id": "C5K_0001344",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -6.05354
+      },
+      {
+        "id": "C5K_0001345",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -5.60488
+      },
+      {
+        "id": "C5K_0001346",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -5.15622
+      },
+      {
+        "id": "C5K_0001347",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -4.70756
+      },
+      {
+        "id": "C5K_0001348",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -4.2589
+      },
+      {
+        "id": "C5K_0001349",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -3.81025
+      },
+      {
+        "id": "C5K_0001350",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -3.36159
+      },
+      {
+        "id": "C5K_0001351",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -2.91293
+      },
+      {
+        "id": "C5K_0001352",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -2.46427
+      },
+      {
+        "id": "C5K_0001353",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -2.01561
+      },
+      {
+        "id": "C5K_0001354",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -1.56695
+      },
+      {
+        "id": "C5K_0001355",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -1.11829
+      },
+      {
+        "id": "C5K_0001356",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -0.66964
+      },
+      {
+        "id": "C5K_0001357",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": -0.22098
+      },
+      {
+        "id": "C5K_0001358",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": 0.22768
+      },
+      {
+        "id": "C5K_0001359",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": 0.67634
+      },
+      {
+        "id": "C5K_0001360",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": 1.125
+      },
+      {
+        "id": "C5K_0001361",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": 1.57366
+      },
+      {
+        "id": "C5K_0001362",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": 2.02232
+      },
+      {
+        "id": "C5K_0001363",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": 2.47097
+      },
+      {
+        "id": "C5K_0001364",
+        "category": "arid_desert",
+        "latitude": 26.43783,
+        "longitude": 2.91963
+      },
+      {
+        "id": "C5K_0001365",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -10.98874
+      },
+      {
+        "id": "C5K_0001366",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -10.5385
+      },
+      {
+        "id": "C5K_0001367",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -10.08827
+      },
+      {
+        "id": "C5K_0001368",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -9.63803
+      },
+      {
+        "id": "C5K_0001369",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -9.18779
+      },
+      {
+        "id": "C5K_0001370",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -8.73755
+      },
+      {
+        "id": "C5K_0001371",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -8.28731
+      },
+      {
+        "id": "C5K_0001372",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -7.83707
+      },
+      {
+        "id": "C5K_0001373",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -7.38683
+      },
+      {
+        "id": "C5K_0001374",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -6.93659
+      },
+      {
+        "id": "C5K_0001375",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -6.48635
+      },
+      {
+        "id": "C5K_0001376",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -6.03611
+      },
+      {
+        "id": "C5K_0001377",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -5.58587
+      },
+      {
+        "id": "C5K_0001378",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -5.13563
+      },
+      {
+        "id": "C5K_0001379",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -4.68539
+      },
+      {
+        "id": "C5K_0001380",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -4.23515
+      },
+      {
+        "id": "C5K_0001381",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -3.78491
+      },
+      {
+        "id": "C5K_0001382",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -3.33467
+      },
+      {
+        "id": "C5K_0001383",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -2.88444
+      },
+      {
+        "id": "C5K_0001384",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -2.4342
+      },
+      {
+        "id": "C5K_0001385",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -1.98396
+      },
+      {
+        "id": "C5K_0001386",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -1.53372
+      },
+      {
+        "id": "C5K_0001387",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -1.08348
+      },
+      {
+        "id": "C5K_0001388",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -0.63324
+      },
+      {
+        "id": "C5K_0001389",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": -0.183
+      },
+      {
+        "id": "C5K_0001390",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": 0.26724
+      },
+      {
+        "id": "C5K_0001391",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": 0.71748
+      },
+      {
+        "id": "C5K_0001392",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": 1.16772
+      },
+      {
+        "id": "C5K_0001393",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": 1.61796
+      },
+      {
+        "id": "C5K_0001394",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": 2.0682
+      },
+      {
+        "id": "C5K_0001395",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": 2.51844
+      },
+      {
+        "id": "C5K_0001396",
+        "category": "arid_desert",
+        "latitude": 26.83957,
+        "longitude": 2.96868
+      },
+      {
+        "id": "C5K_0001397",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -10.9887
+      },
+      {
+        "id": "C5K_0001398",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -10.53685
+      },
+      {
+        "id": "C5K_0001399",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -10.085
+      },
+      {
+        "id": "C5K_0001400",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -9.63314
+      },
+      {
+        "id": "C5K_0001401",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -9.18129
+      },
+      {
+        "id": "C5K_0001402",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -8.72944
+      },
+      {
+        "id": "C5K_0001403",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -8.27758
+      },
+      {
+        "id": "C5K_0001404",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -7.82573
+      },
+      {
+        "id": "C5K_0001405",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -7.37387
+      },
+      {
+        "id": "C5K_0001406",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -6.92202
+      },
+      {
+        "id": "C5K_0001407",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -6.47017
+      },
+      {
+        "id": "C5K_0001408",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -6.01831
+      },
+      {
+        "id": "C5K_0001409",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -5.56646
+      },
+      {
+        "id": "C5K_0001410",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -5.11461
+      },
+      {
+        "id": "C5K_0001411",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -4.66275
+      },
+      {
+        "id": "C5K_0001412",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -4.2109
+      },
+      {
+        "id": "C5K_0001413",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -3.75905
+      },
+      {
+        "id": "C5K_0001414",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -3.30719
+      },
+      {
+        "id": "C5K_0001415",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -2.85534
+      },
+      {
+        "id": "C5K_0001416",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -2.40349
+      },
+      {
+        "id": "C5K_0001417",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -1.95163
+      },
+      {
+        "id": "C5K_0001418",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -1.49978
+      },
+      {
+        "id": "C5K_0001419",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -1.04792
+      },
+      {
+        "id": "C5K_0001420",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -0.59607
+      },
+      {
+        "id": "C5K_0001421",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": -0.14422
+      },
+      {
+        "id": "C5K_0001422",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": 0.30764
+      },
+      {
+        "id": "C5K_0001423",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": 0.75949
+      },
+      {
+        "id": "C5K_0001424",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": 1.21134
+      },
+      {
+        "id": "C5K_0001425",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": 1.6632
+      },
+      {
+        "id": "C5K_0001426",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": 2.11505
+      },
+      {
+        "id": "C5K_0001427",
+        "category": "arid_desert",
+        "latitude": 27.24131,
+        "longitude": 2.5669
+      },
+      {
+        "id": "C5K_0001428",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -10.98866
+      },
+      {
+        "id": "C5K_0001429",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -10.53516
+      },
+      {
+        "id": "C5K_0001430",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -10.08166
+      },
+      {
+        "id": "C5K_0001431",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -9.62816
+      },
+      {
+        "id": "C5K_0001432",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -9.17466
+      },
+      {
+        "id": "C5K_0001433",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -8.72115
+      },
+      {
+        "id": "C5K_0001434",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -8.26765
+      },
+      {
+        "id": "C5K_0001435",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -7.81415
+      },
+      {
+        "id": "C5K_0001436",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -7.36065
+      },
+      {
+        "id": "C5K_0001437",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -6.90715
+      },
+      {
+        "id": "C5K_0001438",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -6.45364
+      },
+      {
+        "id": "C5K_0001439",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -6.00014
+      },
+      {
+        "id": "C5K_0001440",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -5.54664
+      },
+      {
+        "id": "C5K_0001441",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -5.09314
+      },
+      {
+        "id": "C5K_0001442",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -4.63964
+      },
+      {
+        "id": "C5K_0001443",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -4.18614
+      },
+      {
+        "id": "C5K_0001444",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -3.73263
+      },
+      {
+        "id": "C5K_0001445",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -3.27913
+      },
+      {
+        "id": "C5K_0001446",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -2.82563
+      },
+      {
+        "id": "C5K_0001447",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -2.37213
+      },
+      {
+        "id": "C5K_0001448",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -1.91863
+      },
+      {
+        "id": "C5K_0001449",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -1.46512
+      },
+      {
+        "id": "C5K_0001450",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -1.01162
+      },
+      {
+        "id": "C5K_0001451",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -0.55812
+      },
+      {
+        "id": "C5K_0001452",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": -0.10462
+      },
+      {
+        "id": "C5K_0001453",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": 0.34888
+      },
+      {
+        "id": "C5K_0001454",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": 0.80238
+      },
+      {
+        "id": "C5K_0001455",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": 1.25589
+      },
+      {
+        "id": "C5K_0001456",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": 1.70939
+      },
+      {
+        "id": "C5K_0001457",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": 2.16289
+      },
+      {
+        "id": "C5K_0001458",
+        "category": "arid_desert",
+        "latitude": 27.64305,
+        "longitude": 2.61639
+      },
+      {
+        "id": "C5K_0001459",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -10.98862
+      },
+      {
+        "id": "C5K_0001460",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -10.53344
+      },
+      {
+        "id": "C5K_0001461",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -10.07825
+      },
+      {
+        "id": "C5K_0001462",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -9.62307
+      },
+      {
+        "id": "C5K_0001463",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -9.16788
+      },
+      {
+        "id": "C5K_0001464",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -8.7127
+      },
+      {
+        "id": "C5K_0001465",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -8.25751
+      },
+      {
+        "id": "C5K_0001466",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -7.80233
+      },
+      {
+        "id": "C5K_0001467",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -7.34714
+      },
+      {
+        "id": "C5K_0001468",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -6.89196
+      },
+      {
+        "id": "C5K_0001469",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -6.43677
+      },
+      {
+        "id": "C5K_0001470",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -5.98159
+      },
+      {
+        "id": "C5K_0001471",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -5.52641
+      },
+      {
+        "id": "C5K_0001472",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -5.07122
+      },
+      {
+        "id": "C5K_0001473",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -4.61604
+      },
+      {
+        "id": "C5K_0001474",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -4.16085
+      },
+      {
+        "id": "C5K_0001475",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -3.70567
+      },
+      {
+        "id": "C5K_0001476",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -3.25048
+      },
+      {
+        "id": "C5K_0001477",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -2.7953
+      },
+      {
+        "id": "C5K_0001478",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -2.34011
+      },
+      {
+        "id": "C5K_0001479",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -1.88493
+      },
+      {
+        "id": "C5K_0001480",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -1.42974
+      },
+      {
+        "id": "C5K_0001481",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -0.97456
+      },
+      {
+        "id": "C5K_0001482",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -0.51938
+      },
+      {
+        "id": "C5K_0001483",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": -0.06419
+      },
+      {
+        "id": "C5K_0001484",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": 0.39099
+      },
+      {
+        "id": "C5K_0001485",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": 0.84618
+      },
+      {
+        "id": "C5K_0001486",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": 1.30136
+      },
+      {
+        "id": "C5K_0001487",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": 1.75655
+      },
+      {
+        "id": "C5K_0001488",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": 2.21173
+      },
+      {
+        "id": "C5K_0001489",
+        "category": "arid_desert",
+        "latitude": 28.04478,
+        "longitude": 2.66692
+      },
+      {
+        "id": "C5K_0001490",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -10.98858
+      },
+      {
+        "id": "C5K_0001491",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -10.53168
+      },
+      {
+        "id": "C5K_0001492",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -10.07477
+      },
+      {
+        "id": "C5K_0001493",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -9.61787
+      },
+      {
+        "id": "C5K_0001494",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -9.16097
+      },
+      {
+        "id": "C5K_0001495",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -8.70407
+      },
+      {
+        "id": "C5K_0001496",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -8.24716
+      },
+      {
+        "id": "C5K_0001497",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -7.79026
+      },
+      {
+        "id": "C5K_0001498",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -7.33336
+      },
+      {
+        "id": "C5K_0001499",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -6.87646
+      },
+      {
+        "id": "C5K_0001500",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -6.41955
+      },
+      {
+        "id": "C5K_0001501",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -5.96265
+      },
+      {
+        "id": "C5K_0001502",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -5.50575
+      },
+      {
+        "id": "C5K_0001503",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -5.04885
+      },
+      {
+        "id": "C5K_0001504",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -4.59194
+      },
+      {
+        "id": "C5K_0001505",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -4.13504
+      },
+      {
+        "id": "C5K_0001506",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -3.67814
+      },
+      {
+        "id": "C5K_0001507",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -3.22124
+      },
+      {
+        "id": "C5K_0001508",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -2.76433
+      },
+      {
+        "id": "C5K_0001509",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -2.30743
+      },
+      {
+        "id": "C5K_0001510",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -1.85053
+      },
+      {
+        "id": "C5K_0001511",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -1.39363
+      },
+      {
+        "id": "C5K_0001512",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -0.93672
+      },
+      {
+        "id": "C5K_0001513",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -0.47982
+      },
+      {
+        "id": "C5K_0001514",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": -0.02292
+      },
+      {
+        "id": "C5K_0001515",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": 0.43398
+      },
+      {
+        "id": "C5K_0001516",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": 0.89088
+      },
+      {
+        "id": "C5K_0001517",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": 1.34779
+      },
+      {
+        "id": "C5K_0001518",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": 1.80469
+      },
+      {
+        "id": "C5K_0001519",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": 2.26159
+      },
+      {
+        "id": "C5K_0001520",
+        "category": "arid_desert",
+        "latitude": 28.44652,
+        "longitude": 2.71849
+      },
+      {
+        "id": "C5K_0001521",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 5.01056
+      },
+      {
+        "id": "C5K_0001522",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 5.433
+      },
+      {
+        "id": "C5K_0001523",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 5.85543
+      },
+      {
+        "id": "C5K_0001524",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 6.27787
+      },
+      {
+        "id": "C5K_0001525",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 6.7003
+      },
+      {
+        "id": "C5K_0001526",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 7.12274
+      },
+      {
+        "id": "C5K_0001527",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 7.54517
+      },
+      {
+        "id": "C5K_0001528",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 7.96761
+      },
+      {
+        "id": "C5K_0001529",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 8.39004
+      },
+      {
+        "id": "C5K_0001530",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 8.81248
+      },
+      {
+        "id": "C5K_0001531",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 9.23491
+      },
+      {
+        "id": "C5K_0001532",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 9.65735
+      },
+      {
+        "id": "C5K_0001533",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 10.07978
+      },
+      {
+        "id": "C5K_0001534",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 10.50222
+      },
+      {
+        "id": "C5K_0001535",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 10.92466
+      },
+      {
+        "id": "C5K_0001536",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 11.34709
+      },
+      {
+        "id": "C5K_0001537",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 11.76953
+      },
+      {
+        "id": "C5K_0001538",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 12.19196
+      },
+      {
+        "id": "C5K_0001539",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 12.6144
+      },
+      {
+        "id": "C5K_0001540",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 13.03683
+      },
+      {
+        "id": "C5K_0001541",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 13.45927
+      },
+      {
+        "id": "C5K_0001542",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 13.8817
+      },
+      {
+        "id": "C5K_0001543",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 14.30414
+      },
+      {
+        "id": "C5K_0001544",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 14.72657
+      },
+      {
+        "id": "C5K_0001545",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 15.14901
+      },
+      {
+        "id": "C5K_0001546",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 15.57144
+      },
+      {
+        "id": "C5K_0001547",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 15.99388
+      },
+      {
+        "id": "C5K_0001548",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 16.41631
+      },
+      {
+        "id": "C5K_0001549",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 16.83875
+      },
+      {
+        "id": "C5K_0001550",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 17.26119
+      },
+      {
+        "id": "C5K_0001551",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 17.68362
+      },
+      {
+        "id": "C5K_0001552",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 18.10606
+      },
+      {
+        "id": "C5K_0001553",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 18.52849
+      },
+      {
+        "id": "C5K_0001554",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 18.95093
+      },
+      {
+        "id": "C5K_0001555",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 19.37336
+      },
+      {
+        "id": "C5K_0001556",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 19.7958
+      },
+      {
+        "id": "C5K_0001557",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 20.21823
+      },
+      {
+        "id": "C5K_0001558",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 20.64067
+      },
+      {
+        "id": "C5K_0001559",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 21.0631
+      },
+      {
+        "id": "C5K_0001560",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 21.48554
+      },
+      {
+        "id": "C5K_0001561",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 21.90797
+      },
+      {
+        "id": "C5K_0001562",
+        "category": "volcanic",
+        "latitude": 18.01004,
+        "longitude": 22.33041
+      },
+      {
+        "id": "C5K_0001563",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 5.01059
+      },
+      {
+        "id": "C5K_0001564",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 5.434
+      },
+      {
+        "id": "C5K_0001565",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 5.85741
+      },
+      {
+        "id": "C5K_0001566",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 6.28082
+      },
+      {
+        "id": "C5K_0001567",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 6.70423
+      },
+      {
+        "id": "C5K_0001568",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 7.12764
+      },
+      {
+        "id": "C5K_0001569",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 7.55105
+      },
+      {
+        "id": "C5K_0001570",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 7.97446
+      },
+      {
+        "id": "C5K_0001571",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 8.39787
+      },
+      {
+        "id": "C5K_0001572",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 8.82128
+      },
+      {
+        "id": "C5K_0001573",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 9.24469
+      },
+      {
+        "id": "C5K_0001574",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 9.66811
+      },
+      {
+        "id": "C5K_0001575",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 10.09152
+      },
+      {
+        "id": "C5K_0001576",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 10.51493
+      },
+      {
+        "id": "C5K_0001577",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 10.93834
+      },
+      {
+        "id": "C5K_0001578",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 11.36175
+      },
+      {
+        "id": "C5K_0001579",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 11.78516
+      },
+      {
+        "id": "C5K_0001580",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 12.20857
+      },
+      {
+        "id": "C5K_0001581",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 12.63198
+      },
+      {
+        "id": "C5K_0001582",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 13.05539
+      },
+      {
+        "id": "C5K_0001583",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 13.4788
+      },
+      {
+        "id": "C5K_0001584",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 13.90221
+      },
+      {
+        "id": "C5K_0001585",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 14.32563
+      },
+      {
+        "id": "C5K_0001586",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 14.74904
+      },
+      {
+        "id": "C5K_0001587",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 15.17245
+      },
+      {
+        "id": "C5K_0001588",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 15.59586
+      },
+      {
+        "id": "C5K_0001589",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 16.01927
+      },
+      {
+        "id": "C5K_0001590",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 16.44268
+      },
+      {
+        "id": "C5K_0001591",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 16.86609
+      },
+      {
+        "id": "C5K_0001592",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 17.2895
+      },
+      {
+        "id": "C5K_0001593",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 17.71291
+      },
+      {
+        "id": "C5K_0001594",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 18.13632
+      },
+      {
+        "id": "C5K_0001595",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 18.55973
+      },
+      {
+        "id": "C5K_0001596",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 18.98315
+      },
+      {
+        "id": "C5K_0001597",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 19.40656
+      },
+      {
+        "id": "C5K_0001598",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 19.82997
+      },
+      {
+        "id": "C5K_0001599",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 20.25338
+      },
+      {
+        "id": "C5K_0001600",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 20.67679
+      },
+      {
+        "id": "C5K_0001601",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 21.1002
+      },
+      {
+        "id": "C5K_0001602",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 21.52361
+      },
+      {
+        "id": "C5K_0001603",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 21.94702
+      },
+      {
+        "id": "C5K_0001604",
+        "category": "volcanic",
+        "latitude": 18.41178,
+        "longitude": 22.37043
+      },
+      {
+        "id": "C5K_0001605",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 5.01061
+      },
+      {
+        "id": "C5K_0001606",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 5.43502
+      },
+      {
+        "id": "C5K_0001607",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 5.85943
+      },
+      {
+        "id": "C5K_0001608",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 6.28385
+      },
+      {
+        "id": "C5K_0001609",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 6.70826
+      },
+      {
+        "id": "C5K_0001610",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 7.13267
+      },
+      {
+        "id": "C5K_0001611",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 7.55708
+      },
+      {
+        "id": "C5K_0001612",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 7.98149
+      },
+      {
+        "id": "C5K_0001613",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 8.40591
+      },
+      {
+        "id": "C5K_0001614",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 8.83032
+      },
+      {
+        "id": "C5K_0001615",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 9.25473
+      },
+      {
+        "id": "C5K_0001616",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 9.67914
+      },
+      {
+        "id": "C5K_0001617",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 10.10355
+      },
+      {
+        "id": "C5K_0001618",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 10.52797
+      },
+      {
+        "id": "C5K_0001619",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 10.95238
+      },
+      {
+        "id": "C5K_0001620",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 11.37679
+      },
+      {
+        "id": "C5K_0001621",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 11.8012
+      },
+      {
+        "id": "C5K_0001622",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 12.22561
+      },
+      {
+        "id": "C5K_0001623",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 12.65003
+      },
+      {
+        "id": "C5K_0001624",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 13.07444
+      },
+      {
+        "id": "C5K_0001625",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 13.49885
+      },
+      {
+        "id": "C5K_0001626",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 13.92326
+      },
+      {
+        "id": "C5K_0001627",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 14.34767
+      },
+      {
+        "id": "C5K_0001628",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 14.77208
+      },
+      {
+        "id": "C5K_0001629",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 15.1965
+      },
+      {
+        "id": "C5K_0001630",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 15.62091
+      },
+      {
+        "id": "C5K_0001631",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 16.04532
+      },
+      {
+        "id": "C5K_0001632",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 16.46973
+      },
+      {
+        "id": "C5K_0001633",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 16.89414
+      },
+      {
+        "id": "C5K_0001634",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 17.31856
+      },
+      {
+        "id": "C5K_0001635",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 17.74297
+      },
+      {
+        "id": "C5K_0001636",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 18.16738
+      },
+      {
+        "id": "C5K_0001637",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 18.59179
+      },
+      {
+        "id": "C5K_0001638",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 19.0162
+      },
+      {
+        "id": "C5K_0001639",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 19.44062
+      },
+      {
+        "id": "C5K_0001640",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 19.86503
+      },
+      {
+        "id": "C5K_0001641",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 20.28944
+      },
+      {
+        "id": "C5K_0001642",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 20.71385
+      },
+      {
+        "id": "C5K_0001643",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 21.13826
+      },
+      {
+        "id": "C5K_0001644",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 21.56268
+      },
+      {
+        "id": "C5K_0001645",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 21.98709
+      },
+      {
+        "id": "C5K_0001646",
+        "category": "volcanic",
+        "latitude": 18.81352,
+        "longitude": 22.4115
+      },
+      {
+        "id": "C5K_0001647",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 5.01064
+      },
+      {
+        "id": "C5K_0001648",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 5.43607
+      },
+      {
+        "id": "C5K_0001649",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 5.86151
+      },
+      {
+        "id": "C5K_0001650",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 6.28695
+      },
+      {
+        "id": "C5K_0001651",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 6.71239
+      },
+      {
+        "id": "C5K_0001652",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 7.13783
+      },
+      {
+        "id": "C5K_0001653",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 7.56327
+      },
+      {
+        "id": "C5K_0001654",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 7.98871
+      },
+      {
+        "id": "C5K_0001655",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 8.41415
+      },
+      {
+        "id": "C5K_0001656",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 8.83958
+      },
+      {
+        "id": "C5K_0001657",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 9.26502
+      },
+      {
+        "id": "C5K_0001658",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 9.69046
+      },
+      {
+        "id": "C5K_0001659",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 10.1159
+      },
+      {
+        "id": "C5K_0001660",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 10.54134
+      },
+      {
+        "id": "C5K_0001661",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 10.96678
+      },
+      {
+        "id": "C5K_0001662",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 11.39222
+      },
+      {
+        "id": "C5K_0001663",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 11.81765
+      },
+      {
+        "id": "C5K_0001664",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 12.24309
+      },
+      {
+        "id": "C5K_0001665",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 12.66853
+      },
+      {
+        "id": "C5K_0001666",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 13.09397
+      },
+      {
+        "id": "C5K_0001667",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 13.51941
+      },
+      {
+        "id": "C5K_0001668",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 13.94485
+      },
+      {
+        "id": "C5K_0001669",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 14.37029
+      },
+      {
+        "id": "C5K_0001670",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 14.79573
+      },
+      {
+        "id": "C5K_0001671",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 15.22116
+      },
+      {
+        "id": "C5K_0001672",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 15.6466
+      },
+      {
+        "id": "C5K_0001673",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 16.07204
+      },
+      {
+        "id": "C5K_0001674",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 16.49748
+      },
+      {
+        "id": "C5K_0001675",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 16.92292
+      },
+      {
+        "id": "C5K_0001676",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 17.34836
+      },
+      {
+        "id": "C5K_0001677",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 17.7738
+      },
+      {
+        "id": "C5K_0001678",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 18.19923
+      },
+      {
+        "id": "C5K_0001679",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 18.62467
+      },
+      {
+        "id": "C5K_0001680",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 19.05011
+      },
+      {
+        "id": "C5K_0001681",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 19.47555
+      },
+      {
+        "id": "C5K_0001682",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 19.90099
+      },
+      {
+        "id": "C5K_0001683",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 20.32643
+      },
+      {
+        "id": "C5K_0001684",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 20.75187
+      },
+      {
+        "id": "C5K_0001685",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 21.17731
+      },
+      {
+        "id": "C5K_0001686",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 21.60274
+      },
+      {
+        "id": "C5K_0001687",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 22.02818
+      },
+      {
+        "id": "C5K_0001688",
+        "category": "volcanic",
+        "latitude": 19.21525,
+        "longitude": 22.45362
+      },
+      {
+        "id": "C5K_0001689",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 5.01066
+      },
+      {
+        "id": "C5K_0001690",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 5.43715
+      },
+      {
+        "id": "C5K_0001691",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 5.86365
+      },
+      {
+        "id": "C5K_0001692",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 6.29014
+      },
+      {
+        "id": "C5K_0001693",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 6.71663
+      },
+      {
+        "id": "C5K_0001694",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 7.14312
+      },
+      {
+        "id": "C5K_0001695",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 7.56961
+      },
+      {
+        "id": "C5K_0001696",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 7.9961
+      },
+      {
+        "id": "C5K_0001697",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 8.42259
+      },
+      {
+        "id": "C5K_0001698",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 8.84909
+      },
+      {
+        "id": "C5K_0001699",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 9.27558
+      },
+      {
+        "id": "C5K_0001700",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 9.70207
+      },
+      {
+        "id": "C5K_0001701",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 10.12856
+      },
+      {
+        "id": "C5K_0001702",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 10.55505
+      },
+      {
+        "id": "C5K_0001703",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 10.98154
+      },
+      {
+        "id": "C5K_0001704",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 11.40803
+      },
+      {
+        "id": "C5K_0001705",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 11.83452
+      },
+      {
+        "id": "C5K_0001706",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 12.26102
+      },
+      {
+        "id": "C5K_0001707",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 12.68751
+      },
+      {
+        "id": "C5K_0001708",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 13.114
+      },
+      {
+        "id": "C5K_0001709",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 13.54049
+      },
+      {
+        "id": "C5K_0001710",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 13.96698
+      },
+      {
+        "id": "C5K_0001711",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 14.39347
+      },
+      {
+        "id": "C5K_0001712",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 14.81996
+      },
+      {
+        "id": "C5K_0001713",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 15.24646
+      },
+      {
+        "id": "C5K_0001714",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 15.67295
+      },
+      {
+        "id": "C5K_0001715",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 16.09944
+      },
+      {
+        "id": "C5K_0001716",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 16.52593
+      },
+      {
+        "id": "C5K_0001717",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 16.95242
+      },
+      {
+        "id": "C5K_0001718",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 17.37891
+      },
+      {
+        "id": "C5K_0001719",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 17.8054
+      },
+      {
+        "id": "C5K_0001720",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 18.2319
+      },
+      {
+        "id": "C5K_0001721",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 18.65839
+      },
+      {
+        "id": "C5K_0001722",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 19.08488
+      },
+      {
+        "id": "C5K_0001723",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 19.51137
+      },
+      {
+        "id": "C5K_0001724",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 19.93786
+      },
+      {
+        "id": "C5K_0001725",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 20.36435
+      },
+      {
+        "id": "C5K_0001726",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 20.79084
+      },
+      {
+        "id": "C5K_0001727",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 21.21734
+      },
+      {
+        "id": "C5K_0001728",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 21.64383
+      },
+      {
+        "id": "C5K_0001729",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 22.07032
+      },
+      {
+        "id": "C5K_0001730",
+        "category": "volcanic",
+        "latitude": 19.61699,
+        "longitude": 22.49681
+      },
+      {
+        "id": "C5K_0001731",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 5.01069
+      },
+      {
+        "id": "C5K_0001732",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 5.43826
+      },
+      {
+        "id": "C5K_0001733",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 5.86583
+      },
+      {
+        "id": "C5K_0001734",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 6.2934
+      },
+      {
+        "id": "C5K_0001735",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 6.72097
+      },
+      {
+        "id": "C5K_0001736",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 7.14854
+      },
+      {
+        "id": "C5K_0001737",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 7.57611
+      },
+      {
+        "id": "C5K_0001738",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 8.00368
+      },
+      {
+        "id": "C5K_0001739",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 8.43125
+      },
+      {
+        "id": "C5K_0001740",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 8.85882
+      },
+      {
+        "id": "C5K_0001741",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 9.28639
+      },
+      {
+        "id": "C5K_0001742",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 9.71396
+      },
+      {
+        "id": "C5K_0001743",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 10.14153
+      },
+      {
+        "id": "C5K_0001744",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 10.56911
+      },
+      {
+        "id": "C5K_0001745",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 10.99668
+      },
+      {
+        "id": "C5K_0001746",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 11.42425
+      },
+      {
+        "id": "C5K_0001747",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 11.85182
+      },
+      {
+        "id": "C5K_0001748",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 12.27939
+      },
+      {
+        "id": "C5K_0001749",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 12.70696
+      },
+      {
+        "id": "C5K_0001750",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 13.13453
+      },
+      {
+        "id": "C5K_0001751",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 13.5621
+      },
+      {
+        "id": "C5K_0001752",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 13.98967
+      },
+      {
+        "id": "C5K_0001753",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 14.41724
+      },
+      {
+        "id": "C5K_0001754",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 14.84481
+      },
+      {
+        "id": "C5K_0001755",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 15.27238
+      },
+      {
+        "id": "C5K_0001756",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 15.69995
+      },
+      {
+        "id": "C5K_0001757",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 16.12752
+      },
+      {
+        "id": "C5K_0001758",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 16.55509
+      },
+      {
+        "id": "C5K_0001759",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 16.98266
+      },
+      {
+        "id": "C5K_0001760",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 17.41023
+      },
+      {
+        "id": "C5K_0001761",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 17.8378
+      },
+      {
+        "id": "C5K_0001762",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 18.26537
+      },
+      {
+        "id": "C5K_0001763",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 18.69294
+      },
+      {
+        "id": "C5K_0001764",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 19.12051
+      },
+      {
+        "id": "C5K_0001765",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 19.54808
+      },
+      {
+        "id": "C5K_0001766",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 19.97565
+      },
+      {
+        "id": "C5K_0001767",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 20.40323
+      },
+      {
+        "id": "C5K_0001768",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 20.8308
+      },
+      {
+        "id": "C5K_0001769",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 21.25837
+      },
+      {
+        "id": "C5K_0001770",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 21.68594
+      },
+      {
+        "id": "C5K_0001771",
+        "category": "volcanic",
+        "latitude": 20.01873,
+        "longitude": 22.11351
+      },
+      {
+        "id": "C5K_0001772",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 5.01072
+      },
+      {
+        "id": "C5K_0001773",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 5.43939
+      },
+      {
+        "id": "C5K_0001774",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 5.86807
+      },
+      {
+        "id": "C5K_0001775",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 6.29675
+      },
+      {
+        "id": "C5K_0001776",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 6.72542
+      },
+      {
+        "id": "C5K_0001777",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 7.1541
+      },
+      {
+        "id": "C5K_0001778",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 7.58277
+      },
+      {
+        "id": "C5K_0001779",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 8.01145
+      },
+      {
+        "id": "C5K_0001780",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 8.44013
+      },
+      {
+        "id": "C5K_0001781",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 8.8688
+      },
+      {
+        "id": "C5K_0001782",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 9.29748
+      },
+      {
+        "id": "C5K_0001783",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 9.72615
+      },
+      {
+        "id": "C5K_0001784",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 10.15483
+      },
+      {
+        "id": "C5K_0001785",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 10.58351
+      },
+      {
+        "id": "C5K_0001786",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 11.01218
+      },
+      {
+        "id": "C5K_0001787",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 11.44086
+      },
+      {
+        "id": "C5K_0001788",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 11.86953
+      },
+      {
+        "id": "C5K_0001789",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 12.29821
+      },
+      {
+        "id": "C5K_0001790",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 12.72689
+      },
+      {
+        "id": "C5K_0001791",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 13.15556
+      },
+      {
+        "id": "C5K_0001792",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 13.58424
+      },
+      {
+        "id": "C5K_0001793",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 14.01291
+      },
+      {
+        "id": "C5K_0001794",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 14.44159
+      },
+      {
+        "id": "C5K_0001795",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 14.87027
+      },
+      {
+        "id": "C5K_0001796",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 15.29894
+      },
+      {
+        "id": "C5K_0001797",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 15.72762
+      },
+      {
+        "id": "C5K_0001798",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 16.15629
+      },
+      {
+        "id": "C5K_0001799",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 16.58497
+      },
+      {
+        "id": "C5K_0001800",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 17.01365
+      },
+      {
+        "id": "C5K_0001801",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 17.44232
+      },
+      {
+        "id": "C5K_0001802",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 17.871
+      },
+      {
+        "id": "C5K_0001803",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 18.29968
+      },
+      {
+        "id": "C5K_0001804",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 18.72835
+      },
+      {
+        "id": "C5K_0001805",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 19.15703
+      },
+      {
+        "id": "C5K_0001806",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 19.5857
+      },
+      {
+        "id": "C5K_0001807",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 20.01438
+      },
+      {
+        "id": "C5K_0001808",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 20.44306
+      },
+      {
+        "id": "C5K_0001809",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 20.87173
+      },
+      {
+        "id": "C5K_0001810",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 21.30041
+      },
+      {
+        "id": "C5K_0001811",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 21.72908
+      },
+      {
+        "id": "C5K_0001812",
+        "category": "volcanic",
+        "latitude": 20.42047,
+        "longitude": 22.15776
+      },
+      {
+        "id": "C5K_0001813",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 5.01075
+      },
+      {
+        "id": "C5K_0001814",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 5.44055
+      },
+      {
+        "id": "C5K_0001815",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 5.87036
+      },
+      {
+        "id": "C5K_0001816",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 6.30017
+      },
+      {
+        "id": "C5K_0001817",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 6.72998
+      },
+      {
+        "id": "C5K_0001818",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 7.15979
+      },
+      {
+        "id": "C5K_0001819",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 7.5896
+      },
+      {
+        "id": "C5K_0001820",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 8.01941
+      },
+      {
+        "id": "C5K_0001821",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 8.44921
+      },
+      {
+        "id": "C5K_0001822",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 8.87902
+      },
+      {
+        "id": "C5K_0001823",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 9.30883
+      },
+      {
+        "id": "C5K_0001824",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 9.73864
+      },
+      {
+        "id": "C5K_0001825",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 10.16845
+      },
+      {
+        "id": "C5K_0001826",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 10.59826
+      },
+      {
+        "id": "C5K_0001827",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 11.02807
+      },
+      {
+        "id": "C5K_0001828",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 11.45787
+      },
+      {
+        "id": "C5K_0001829",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 11.88768
+      },
+      {
+        "id": "C5K_0001830",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 12.31749
+      },
+      {
+        "id": "C5K_0001831",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 12.7473
+      },
+      {
+        "id": "C5K_0001832",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 13.17711
+      },
+      {
+        "id": "C5K_0001833",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 13.60692
+      },
+      {
+        "id": "C5K_0001834",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 14.03673
+      },
+      {
+        "id": "C5K_0001835",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 14.46654
+      },
+      {
+        "id": "C5K_0001836",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 14.89634
+      },
+      {
+        "id": "C5K_0001837",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 15.32615
+      },
+      {
+        "id": "C5K_0001838",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 15.75596
+      },
+      {
+        "id": "C5K_0001839",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 16.18577
+      },
+      {
+        "id": "C5K_0001840",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 16.61558
+      },
+      {
+        "id": "C5K_0001841",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 17.04539
+      },
+      {
+        "id": "C5K_0001842",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 17.4752
+      },
+      {
+        "id": "C5K_0001843",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 17.905
+      },
+      {
+        "id": "C5K_0001844",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 18.33481
+      },
+      {
+        "id": "C5K_0001845",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 18.76462
+      },
+      {
+        "id": "C5K_0001846",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 19.19443
+      },
+      {
+        "id": "C5K_0001847",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 19.62424
+      },
+      {
+        "id": "C5K_0001848",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 20.05405
+      },
+      {
+        "id": "C5K_0001849",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 20.48386
+      },
+      {
+        "id": "C5K_0001850",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 20.91366
+      },
+      {
+        "id": "C5K_0001851",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 21.34347
+      },
+      {
+        "id": "C5K_0001852",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 21.77328
+      },
+      {
+        "id": "C5K_0001853",
+        "category": "volcanic",
+        "latitude": 20.8222,
+        "longitude": 22.20309
+      },
+      {
+        "id": "C5K_0001854",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 5.01077
+      },
+      {
+        "id": "C5K_0001855",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 5.44174
+      },
+      {
+        "id": "C5K_0001856",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 5.87271
+      },
+      {
+        "id": "C5K_0001857",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 6.30368
+      },
+      {
+        "id": "C5K_0001858",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 6.73465
+      },
+      {
+        "id": "C5K_0001859",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 7.16562
+      },
+      {
+        "id": "C5K_0001860",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 7.59658
+      },
+      {
+        "id": "C5K_0001861",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 8.02755
+      },
+      {
+        "id": "C5K_0001862",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 8.45852
+      },
+      {
+        "id": "C5K_0001863",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 8.88949
+      },
+      {
+        "id": "C5K_0001864",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 9.32046
+      },
+      {
+        "id": "C5K_0001865",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 9.75143
+      },
+      {
+        "id": "C5K_0001866",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 10.1824
+      },
+      {
+        "id": "C5K_0001867",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 10.61336
+      },
+      {
+        "id": "C5K_0001868",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 11.04433
+      },
+      {
+        "id": "C5K_0001869",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 11.4753
+      },
+      {
+        "id": "C5K_0001870",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 11.90627
+      },
+      {
+        "id": "C5K_0001871",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 12.33724
+      },
+      {
+        "id": "C5K_0001872",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 12.76821
+      },
+      {
+        "id": "C5K_0001873",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 13.19917
+      },
+      {
+        "id": "C5K_0001874",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 13.63014
+      },
+      {
+        "id": "C5K_0001875",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 14.06111
+      },
+      {
+        "id": "C5K_0001876",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 14.49208
+      },
+      {
+        "id": "C5K_0001877",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 14.92305
+      },
+      {
+        "id": "C5K_0001878",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 15.35402
+      },
+      {
+        "id": "C5K_0001879",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 15.78498
+      },
+      {
+        "id": "C5K_0001880",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 16.21595
+      },
+      {
+        "id": "C5K_0001881",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 16.64692
+      },
+      {
+        "id": "C5K_0001882",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 17.07789
+      },
+      {
+        "id": "C5K_0001883",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 17.50886
+      },
+      {
+        "id": "C5K_0001884",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 17.93983
+      },
+      {
+        "id": "C5K_0001885",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 18.3708
+      },
+      {
+        "id": "C5K_0001886",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 18.80176
+      },
+      {
+        "id": "C5K_0001887",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 19.23273
+      },
+      {
+        "id": "C5K_0001888",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 19.6637
+      },
+      {
+        "id": "C5K_0001889",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 20.09467
+      },
+      {
+        "id": "C5K_0001890",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 20.52564
+      },
+      {
+        "id": "C5K_0001891",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 20.95661
+      },
+      {
+        "id": "C5K_0001892",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 21.38757
+      },
+      {
+        "id": "C5K_0001893",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 21.81854
+      },
+      {
+        "id": "C5K_0001894",
+        "category": "volcanic",
+        "latitude": 21.22394,
+        "longitude": 22.24951
+      },
+      {
+        "id": "C5K_0001895",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 5.0108
+      },
+      {
+        "id": "C5K_0001896",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 5.44296
+      },
+      {
+        "id": "C5K_0001897",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 5.87512
+      },
+      {
+        "id": "C5K_0001898",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 6.30727
+      },
+      {
+        "id": "C5K_0001899",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 6.73943
+      },
+      {
+        "id": "C5K_0001900",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 7.17158
+      },
+      {
+        "id": "C5K_0001901",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 7.60374
+      },
+      {
+        "id": "C5K_0001902",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 8.03589
+      },
+      {
+        "id": "C5K_0001903",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 8.46805
+      },
+      {
+        "id": "C5K_0001904",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 8.90021
+      },
+      {
+        "id": "C5K_0001905",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 9.33236
+      },
+      {
+        "id": "C5K_0001906",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 9.76452
+      },
+      {
+        "id": "C5K_0001907",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 10.19667
+      },
+      {
+        "id": "C5K_0001908",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 10.62883
+      },
+      {
+        "id": "C5K_0001909",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 11.06099
+      },
+      {
+        "id": "C5K_0001910",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 11.49314
+      },
+      {
+        "id": "C5K_0001911",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 11.9253
+      },
+      {
+        "id": "C5K_0001912",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 12.35745
+      },
+      {
+        "id": "C5K_0001913",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 12.78961
+      },
+      {
+        "id": "C5K_0001914",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 13.22176
+      },
+      {
+        "id": "C5K_0001915",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 13.65392
+      },
+      {
+        "id": "C5K_0001916",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 14.08608
+      },
+      {
+        "id": "C5K_0001917",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 14.51823
+      },
+      {
+        "id": "C5K_0001918",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 14.95039
+      },
+      {
+        "id": "C5K_0001919",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 15.38254
+      },
+      {
+        "id": "C5K_0001920",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 15.8147
+      },
+      {
+        "id": "C5K_0001921",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 16.24685
+      },
+      {
+        "id": "C5K_0001922",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 16.67901
+      },
+      {
+        "id": "C5K_0001923",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 17.11117
+      },
+      {
+        "id": "C5K_0001924",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 17.54332
+      },
+      {
+        "id": "C5K_0001925",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 17.97548
+      },
+      {
+        "id": "C5K_0001926",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 18.40763
+      },
+      {
+        "id": "C5K_0001927",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 18.83979
+      },
+      {
+        "id": "C5K_0001928",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 19.27195
+      },
+      {
+        "id": "C5K_0001929",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 19.7041
+      },
+      {
+        "id": "C5K_0001930",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 20.13626
+      },
+      {
+        "id": "C5K_0001931",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 20.56841
+      },
+      {
+        "id": "C5K_0001932",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 21.00057
+      },
+      {
+        "id": "C5K_0001933",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 21.43272
+      },
+      {
+        "id": "C5K_0001934",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 21.86488
+      },
+      {
+        "id": "C5K_0001935",
+        "category": "volcanic",
+        "latitude": 21.62568,
+        "longitude": 22.29704
+      },
+      {
+        "id": "C5K_0001936",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 5.01083
+      },
+      {
+        "id": "C5K_0001937",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 5.44421
+      },
+      {
+        "id": "C5K_0001938",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 5.87758
+      },
+      {
+        "id": "C5K_0001939",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 6.31095
+      },
+      {
+        "id": "C5K_0001940",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 6.74432
+      },
+      {
+        "id": "C5K_0001941",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 7.17769
+      },
+      {
+        "id": "C5K_0001942",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 7.61106
+      },
+      {
+        "id": "C5K_0001943",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 8.04443
+      },
+      {
+        "id": "C5K_0001944",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 8.4778
+      },
+      {
+        "id": "C5K_0001945",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 8.91117
+      },
+      {
+        "id": "C5K_0001946",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 9.34455
+      },
+      {
+        "id": "C5K_0001947",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 9.77792
+      },
+      {
+        "id": "C5K_0001948",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 10.21129
+      },
+      {
+        "id": "C5K_0001949",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 10.64466
+      },
+      {
+        "id": "C5K_0001950",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 11.07803
+      },
+      {
+        "id": "C5K_0001951",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 11.5114
+      },
+      {
+        "id": "C5K_0001952",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 11.94477
+      },
+      {
+        "id": "C5K_0001953",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 12.37814
+      },
+      {
+        "id": "C5K_0001954",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 12.81151
+      },
+      {
+        "id": "C5K_0001955",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 13.24489
+      },
+      {
+        "id": "C5K_0001956",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 13.67826
+      },
+      {
+        "id": "C5K_0001957",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 14.11163
+      },
+      {
+        "id": "C5K_0001958",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 14.545
+      },
+      {
+        "id": "C5K_0001959",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 14.97837
+      },
+      {
+        "id": "C5K_0001960",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 15.41174
+      },
+      {
+        "id": "C5K_0001961",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 15.84511
+      },
+      {
+        "id": "C5K_0001962",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 16.27848
+      },
+      {
+        "id": "C5K_0001963",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 16.71185
+      },
+      {
+        "id": "C5K_0001964",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 17.14523
+      },
+      {
+        "id": "C5K_0001965",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 17.5786
+      },
+      {
+        "id": "C5K_0001966",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 18.01197
+      },
+      {
+        "id": "C5K_0001967",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 18.44534
+      },
+      {
+        "id": "C5K_0001968",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 18.87871
+      },
+      {
+        "id": "C5K_0001969",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 19.31208
+      },
+      {
+        "id": "C5K_0001970",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 19.74545
+      },
+      {
+        "id": "C5K_0001971",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 20.17882
+      },
+      {
+        "id": "C5K_0001972",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 20.61219
+      },
+      {
+        "id": "C5K_0001973",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 21.04557
+      },
+      {
+        "id": "C5K_0001974",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 21.47894
+      },
+      {
+        "id": "C5K_0001975",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 21.91231
+      },
+      {
+        "id": "C5K_0001976",
+        "category": "volcanic",
+        "latitude": 22.02741,
+        "longitude": 22.34568
+      },
+      {
+        "id": "C5K_0001977",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 5.01087
+      },
+      {
+        "id": "C5K_0001978",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 5.44548
+      },
+      {
+        "id": "C5K_0001979",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 5.88009
+      },
+      {
+        "id": "C5K_0001980",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 6.31471
+      },
+      {
+        "id": "C5K_0001981",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 6.74932
+      },
+      {
+        "id": "C5K_0001982",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 7.18394
+      },
+      {
+        "id": "C5K_0001983",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 7.61855
+      },
+      {
+        "id": "C5K_0001984",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 8.05317
+      },
+      {
+        "id": "C5K_0001985",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 8.48778
+      },
+      {
+        "id": "C5K_0001986",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 8.9224
+      },
+      {
+        "id": "C5K_0001987",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 9.35701
+      },
+      {
+        "id": "C5K_0001988",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 9.79163
+      },
+      {
+        "id": "C5K_0001989",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 10.22624
+      },
+      {
+        "id": "C5K_0001990",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 10.66086
+      },
+      {
+        "id": "C5K_0001991",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 11.09547
+      },
+      {
+        "id": "C5K_0001992",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 11.53009
+      },
+      {
+        "id": "C5K_0001993",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 11.9647
+      },
+      {
+        "id": "C5K_0001994",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 12.39932
+      },
+      {
+        "id": "C5K_0001995",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 12.83393
+      },
+      {
+        "id": "C5K_0001996",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 13.26854
+      },
+      {
+        "id": "C5K_0001997",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 13.70316
+      },
+      {
+        "id": "C5K_0001998",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 14.13777
+      },
+      {
+        "id": "C5K_0001999",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 14.57239
+      },
+      {
+        "id": "C5K_0002000",
+        "category": "volcanic",
+        "latitude": 22.42915,
+        "longitude": 15.007
+      }
+    ]
+  }
+}
