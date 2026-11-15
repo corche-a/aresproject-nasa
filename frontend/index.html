@@ -64,6 +64,19 @@
     }
     .rank-meta { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
     .chart-box { margin-top: 12px; background: #0f172a; padding: 10px; border-radius: 8px; }
+  
+    .map-card { position: relative; padding: 8px; overflow: hidden; }
+    .topo-control {
+      position: absolute; top: 18px; right: 18px; z-index: 1000;
+      background: rgba(15, 23, 42, 0.92); backdrop-filter: blur(6px);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 10px 12px; width: 230px; box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+    }
+    .topo-control-header {
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 6px;
+    }
+    .topo-control select { padding: 4px 6px; font-size: 0.78rem; margin-top: 0; margin-bottom: 6px; }
   </style>
 </head>
 <body>
@@ -113,8 +126,20 @@
       <input type="range" id="wMineral" min="0" max="100" value="20" />
     </div>
 
-    <div class="card" style="padding:8px;">
+    <div class="card map-card">
       <div id="map"></div>
+      <div id="topoControl" class="topo-control">
+        <div class="topo-control-header">
+          <span>Capa Topografica</span>
+          <span id="topoOpacityVal">45%</span>
+        </div>
+        <select id="topoStyle">
+          <option value="opentopo">Relieve + Curvas (OpenTopoMap)</option>
+          <option value="hillshade">Sombreado DEM 3D (Esri Hillshade)</option>
+          <option value="esritopo">Topografico Fisico (Esri Topo)</option>
+        </select>
+        <input type="range" id="topoOpacity" min="0" max="100" value="45" />
+      </div>
     </div>
 
     <div class="card">
@@ -144,6 +169,28 @@
     L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
       attribution: "&copy; OpenStreetMap &copy; CARTO"
     }).addTo(map);
+    const TOPO_SOURCES = {
+      opentopo: { url: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", attribution: "&copy; OpenTopoMap", maxZoom: 17 },
+      hillshade: { url: "https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}", attribution: "&copy; Esri Hillshade", maxZoom: 16 },
+      esritopo: { url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", attribution: "&copy; Esri Topo", maxZoom: 18 }
+    };
+    let currentTopoLayer = L.tileLayer(TOPO_SOURCES.opentopo.url, { attribution: TOPO_SOURCES.opentopo.attribution, maxZoom: 17, opacity: 0.45 }).addTo(map);
+    const topoControlEl = document.getElementById("topoControl");
+    L.DomEvent.disableClickPropagation(topoControlEl);
+    L.DomEvent.disableScrollPropagation(topoControlEl);
+    const topoStyleSelect = document.getElementById("topoStyle");
+    const topoOpacitySlider = document.getElementById("topoOpacity");
+    const topoOpacityVal = document.getElementById("topoOpacityVal");
+    topoOpacitySlider.addEventListener("input", () => {
+      const pct = Number(topoOpacitySlider.value);
+      topoOpacityVal.textContent = pct + "%";
+      currentTopoLayer.setOpacity(pct / 100);
+    });
+    topoStyleSelect.addEventListener("change", () => {
+      const src = TOPO_SOURCES[topoStyleSelect.value];
+      map.removeLayer(currentTopoLayer);
+      currentTopoLayer = L.tileLayer(src.url, { attribution: src.attribution, maxZoom: src.maxZoom, opacity: Number(topoOpacitySlider.value) / 100 }).addTo(map);
+    });
     const markersLayer = L.layerGroup().addTo(map);
 
     let selectedBasinId = null;
