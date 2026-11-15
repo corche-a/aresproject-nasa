@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARES | Planetary Analog Temporal Discovery Engine</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="analogs_data.js"></script>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --panel: #131a2a;
+      --border: #23304a;
+      --accent: #38bdf8;
+      --mars: #f97316;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { margin: 0; background: var(--bg); color: var(--text); }
+    header {
+      padding: 14px 24px; background: #0f1624; border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    }
+    header h1 { margin: 0; font-size: 1.25rem; letter-spacing: 0.5px; }
+    header h1 span { color: var(--mars); }
+    .badge {
+      background: #1e293b; border: 1px solid var(--border); padding: 4px 10px;
+      border-radius: 999px; font-size: 0.8rem; color: var(--accent);
+    }
+    .grid {
+      display: grid; grid-template-columns: 340px 1fr 380px; gap: 14px;
+      padding: 14px; height: calc(100vh - 60px);
+    }
+    @media (max-width: 1150px) { .grid { grid-template-columns: 1fr; height: auto; } }
+    .card {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px; display: flex; flex-direction: column; overflow-y: auto;
+    }
+    h2 { margin: 0 0 10px 0; font-size: 0.95rem; text-transform: uppercase; color: var(--accent); letter-spacing: 0.6px; }
+    label { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+    select, input[type="range"] { width: 100%; margin-top: 4px; }
+    select {
+      background: #0b0f19; color: var(--text); border: 1px solid var(--border);
+      padding: 8px; border-radius: 6px; font-size: 0.9rem;
+    }
+    .target-desc {
+      margin-top: 8px; padding: 8px 10px; background: #0f172a; border-left: 3px solid var(--mars);
+      font-size: 0.82rem; color: #cbd5e1; border-radius: 4px;
+    }
+    .slider-row { display: flex; justify-content: space-between; font-size: 0.8rem; margin-top: 8px; }
+    #map { width: 100%; height: 100%; min-height: 420px; border-radius: 8px; }
+    .rank-item {
+      padding: 10px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px;
+      background: #0f172a; cursor: pointer; transition: border-color 0.15s;
+    }
+    .rank-item:hover, .rank-item.active { border-color: var(--accent); }
+    .rank-top { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+    .score-pill {
+      background: rgba(56, 189, 248, 0.15); color: var(--accent);
+      padding: 2px 8px; border-radius: 6px; font-size: 0.85rem;
+    }
+    .rank-meta { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+    .chart-box { margin-top: 12px; background: #0f172a; padding: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span>ARES</span> // Temporal Discovery Engine for Moon &amp; Mars Analogs</h1>
+    <div id="statusBadge" class="badge">Cargando datos...</div>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h2>1. Objetivo Planetario</h2>
+      <label for="targetSelect">Sitio de Mision (Luna / Marte)</label>
+      <select id="targetSelect"></select>
+      <div id="targetDesc" class="target-desc"></div>
+
+      <label for="monthFilter">Ventana Temporal</label>
+      <select id="monthFilter">
+        <option value="BEST">Mejor Mes Optimo por Cuenca (Auto-Discovery)</option>
+        <option value="1">Enero (JAN)</option>
+        <option value="2">Febrero (FEB)</option>
+        <option value="3">Marzo (MAR)</option>
+        <option value="4">Abril (APR)</option>
+        <option value="5">Mayo (MAY)</option>
+        <option value="6">Junio (JUN)</option>
+        <option value="7">Julio (JUL)</option>
+        <option value="8">Agosto (AUG)</option>
+        <option value="9">Septiembre (SEP)</option>
+        <option value="10">Octubre (OCT)</option>
+        <option value="11">Noviembre (NOV)</option>
+        <option value="12">Diciembre (DEC)</option>
+      </select>
+
+      <h2 style="margin-top:16px;">2. Pesos de Similitud</h2>
+      <div class="slider-row"><span>Aridez / Sequia</span><span id="wAridityVal">25%</span></div>
+      <input type="range" id="wAridity" min="0" max="100" value="25" />
+
+      <div class="slider-row"><span>Contraste Termico Diurno</span><span id="wThermalVal">25%</span></div>
+      <input type="range" id="wThermal" min="0" max="100" value="25" />
+
+      <div class="slider-row"><span>Actividad de Polvo / Viento</span><span id="wDustVal">15%</span></div>
+      <input type="range" id="wDust" min="0" max="100" value="15" />
+
+      <div class="slider-row"><span>Topografia / Pendiente (DEM)</span><span id="wSlopeVal">15%</span></div>
+      <input type="range" id="wSlope" min="0" max="100" value="15" />
+
+      <div class="slider-row"><span>Afinidad Mineralogica</span><span id="wMineralVal">20%</span></div>
+      <input type="range" id="wMineral" min="0" max="100" value="20" />
+    </div>
+
+    <div class="card" style="padding:8px;">
+      <div id="map"></div>
+    </div>
+
+    <div class="card">
+      <h2>3. Mejores Ventanas Analogas</h2>
+      <div id="leaderboard"></div>
+      <div class="chart-box">
+        <h2 id="chartTitle" style="font-size:0.82rem;">Dinamica Estacional (12 Meses)</h2>
+        <canvas id="seasonalChart" height="190"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const DATA = window.ARES_DATA;
+    const statusBadge = document.getElementById("statusBadge");
+    statusBadge.textContent = `${DATA.metadata.basins_count} Cuencas | ${DATA.metadata.total_windows} Ventanas | EMIT: ${DATA.metadata.emit_integrated ? "Integrado" : "Prior Lit. (Pendiente CSV)"}`;
+
+    const targetSelect = document.getElementById("targetSelect");
+    DATA.targets.forEach(t => {
+      const opt = document.createElement("option");
+      opt.value = t.id;
+      opt.textContent = t.name;
+      targetSelect.appendChild(opt);
+    });
+
+    const map = L.map("map").setView([15, 10], 2);
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+      attribution: "&copy; OpenStreetMap &copy; CARTO"
+    }).addTo(map);
+    const markersLayer = L.layerGroup().addTo(map);
+
+    let selectedBasinId = null;
+    let chartInstance = null;
+
+    function getWeights() {
+      const a = Number(document.getElementById("wAridity").value);
+      const t = Number(document.getElementById("wThermal").value);
+      const d = Number(document.getElementById("wDust").value);
+      const s = Number(document.getElementById("wSlope").value);
+      const m = Number(document.getElementById("wMineral").value);
+      document.getElementById("wAridityVal").textContent = a + "%";
+      document.getElementById("wThermalVal").textContent = t + "%";
+      document.getElementById("wDustVal").textContent = d + "%";
+      document.getElementById("wSlopeVal").textContent = s + "%";
+      document.getElementById("wMineralVal").textContent = m + "%";
+      const sum = Math.max(a + t + d + s + m, 1);
+      return { a: a / sum, t: t / sum, d: d / sum, s: s / sum, m: m / sum };
+    }
+
+    function scoreRecord(rec, target, w) {
+      const dA = Math.abs(rec.aridity_norm - target.ideal.aridity);
+      const dT = Math.abs(rec.thermal_norm - target.ideal.thermal);
+      const dD = Math.abs(rec.dust_norm - target.ideal.dust);
+      const dS = Math.abs(rec.slope_norm - target.ideal.slope);
+      const minMatch = rec.mineral_profile.toLowerCase().includes(target.expected_mineral.toLowerCase()) ? 1.0 : 0.45;
+      const dM = Math.abs(minMatch - target.ideal.mineral);
+
+      const dist = Math.sqrt(w.a * dA * dA + w.t * dT * dT + w.d * dD * dD + w.s * dS * dS + w.m * dM * dM);
+      return Math.max(0, Math.round((1 - dist) * 1000) / 10);
+    }
+
+    function colorForScore(score) {
+      if (score >= 88) return "#22c55e";
+      if (score >= 78) return "#38bdf8";
+      if (score >= 68) return "#f59e0b";
+      return "#ef4444";
+    }
+
+    function renderChart(basinId, target, w) {
+      const rows = DATA.records
+        .filter(r => r.basin_id === basinId)
+        .sort((a, b) => a.month - b.month);
+      if (!rows.length) return;
+
+      document.getElementById("chartTitle").textContent = `Perfil Temporal: ${rows[0].basin_name}`;
+      const labels = rows.map(r => r.month_name);
+      const scores = rows.map(r => scoreRecord(r, target, w));
+      const dtr = rows.map(r => r.diurnal_temp_range_c);
+
+      if (chartInstance) chartInstance.destroy();
+      const ctx = document.getElementById("seasonalChart").getContext("2d");
+      chartInstance = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels,
+          datasets: [
+            {
+              label: "Similitud Planetaria (%)",
+              data: scores,
+              borderColor: "#38bdf8",
+              backgroundColor: "rgba(56,189,248,0.15)",
+              yAxisID: "y",
+              tension: 0.3,
+              fill: true
+            },
+            {
+              label: "Rango Termico Diurno (°C)",
+              data: dtr,
+              borderColor: "#f97316",
+              yAxisID: "y1",
+              tension: 0.3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { labels: { color: "#cbd5e1", font: { size: 11 } } } },
+          scales: {
+            x: { ticks: { color: "#94a3b8" } },
+            y: { position: "left", min: 40, max: 100, ticks: { color: "#38bdf8" } },
+            y1: { position: "right", grid: { drawOnChartArea: false }, ticks: { color: "#f97316" } }
+          }
+        }
+      });
+    }
+
+    function updateDashboard() {
+      const target = DATA.targets.find(t => t.id === targetSelect.value);
+      document.getElementById("targetDesc").textContent = target.description;
+      const w = getWeights();
+      const monthFilter = document.getElementById("monthFilter").value;
+
+      const scored = DATA.records.map(r => ({ ...r, score: scoreRecord(r, target, w) }));
+
+      let displayed = [];
+      if (monthFilter === "BEST") {
+        const bestByBasin = new Map();
+        scored.forEach(r => {
+          const prev = bestByBasin.get(r.basin_id);
+          if (!prev || r.score > prev.score) bestByBasin.set(r.basin_id, r);
+        });
+        displayed = Array.from(bestByBasin.values());
+      } else {
+        const m = Number(monthFilter);
+        displayed = scored.filter(r => r.month === m);
+      }
+
+      displayed.sort((a, b) => b.score - a.score);
+      if (!selectedBasinId && displayed.length) selectedBasinId = displayed[0].basin_id;
+
+      markersLayer.clearLayers();
+      displayed.forEach(r => {
+        const col = colorForScore(r.score);
+        const marker = L.circleMarker([r.lat, r.lon], {
+          radius: r.basin_id === selectedBasinId ? 10 : 7,
+          fillColor: col,
+          color: "#0b0f19",
+          weight: 1.5,
+          fillOpacity: 0.9
+        });
+        marker.bindPopup(`
+          <b>${r.basin_name}</b> (${r.month_name})<br/>
+          Similitud: <b>${r.score}%</b><br/>
+          ΔT Diurno: ${r.diurnal_temp_range_c} °C | Lluvia: ${r.precip_mm} mm<br/>
+          Elev: ${r.elevation_m} m | Pendiente: ${r.slope_deg}°<br/>
+          Mineralogia: ${r.mineral_profile}
+        `);
+        marker.on("click", () => {
+          selectedBasinId = r.basin_id;
+          renderChart(selectedBasinId, target, w);
+        });
+        marker.addTo(markersLayer);
+      });
+
+      const lb = document.getElementById("leaderboard");
+      lb.innerHTML = "";
+      displayed.slice(0, 6).forEach((r, idx) => {
+        const div = document.createElement("div");
+        div.className = "rank-item" + (r.basin_id === selectedBasinId ? " active" : "");
+        div.innerHTML = `
+          <div class="rank-top">
+            <span>#${idx + 1} ${r.basin_name}</span>
+            <span class="score-pill">${r.score}% · ${r.month_name}</span>
+          </div>
+          <div class="rank-meta">
+            ΔT: ${r.diurnal_temp_range_c}°C · Lluvia: ${r.precip_mm}mm · Pend: ${r.slope_deg}° · ${r.mineral_profile.split(" (")[0]}
+          </div>
+        `;
+        div.onclick = () => {
+          selectedBasinId = r.basin_id;
+          map.setView([r.lat, r.lon], 5);
+          renderChart(selectedBasinId, target, w);
+          updateDashboard();
+        };
+        lb.appendChild(div);
+      });
+
+      renderChart(selectedBasinId, target, w);
+    }
+
+    targetSelect.addEventListener("change", () => {
+      const t = DATA.targets.find(x => x.id === targetSelect.value);
+      document.getElementById("wAridity").value = Math.round(t.weights.aridity * 100);
+      document.getElementById("wThermal").value = Math.round(t.weights.thermal * 100);
+      document.getElementById("wDust").value = Math.round(t.weights.dust * 100);
+      document.getElementById("wSlope").value = Math.round(t.weights.slope * 100);
+      document.getElementById("wMineral").value = Math.round(t.weights.mineral * 100);
+      selectedBasinId = null;
+      updateDashboard();
+    });
+
+    ["monthFilter", "wAridity", "wThermal", "wDust", "wSlope", "wMineral"].forEach(id => {
+      document.getElementById(id).addEventListener("input", updateDashboard);
+    });
+
+    updateDashboard();
+  </script>
+</body>
+</html>
