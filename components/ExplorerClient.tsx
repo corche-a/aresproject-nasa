@@ -52,14 +52,19 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
   }, [applied, appliedTarget, data.records]);
   const visibleRanked = showAll ? ranked : ranked.slice(0, 10);
   const sum = weightsSum(draftWeights);
+  const weightsAreValid = Math.abs(sum - 1) < 0.005;
   const updateTarget = (id: string) => {
     const next = data.targets.find((item) => item.id === id) ?? data.targets[0];
     setTargetId(next.id);
     setDraftWeights(targetWeights(next));
   };
   const recompute = () => {
-    if (Math.abs(sum - 1) > 0.001) return;
-    setApplied({ targetId, month, weights: { ...draftWeights } });
+    if (!weightsAreValid) return;
+    const normalizedWeights = metricKeys.reduce((result, key) => {
+      result[key] = (draftWeights[key] ?? 0) / sum;
+      return result;
+    }, {} as Record<MetricKey, number>);
+    setApplied({ targetId, month, weights: normalizedWeights });
     setSelectedBasinId(null);
     setShowAll(false);
   };
@@ -108,8 +113,8 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
       <div className="label">Similarity weights</div>
       <p className="muted target-description">NASA-derived and transparent proxy signals. Missing resources data is not scored.</p>
       {metricGroups.map((group) => <section className="weight-group" key={group.title}><div className="weight-group-title">{group.title}</div>{group.keys.map((key) => <label className="weight-control" key={key}><span>{metricLabels[key]} <b>{Math.round(draftWeights[key] * 100)}%</b></span><input suppressHydrationWarning aria-label={`${metricLabels[key]} weight`} type="range" min="0" max="100" value={Math.round(draftWeights[key] * 100)} onChange={(event) => setDraftWeights({ ...draftWeights, [key]: Number(event.target.value) / 100 })} /></label>)}</section>)}
-      <div className={Math.abs(sum - 1) <= 0.001 ? "weights-ok" : "weights-error"}>Total: {Math.round(sum * 100)}% {Math.abs(sum - 1) <= 0.001 ? "✓" : "— must equal 100%"}</div>
-      <button suppressHydrationWarning className="button" onClick={recompute} disabled={Math.abs(sum - 1) > 0.001}>Recompute</button>
+      <div className={weightsAreValid ? "weights-ok" : "weights-error"}>Total: {Math.round(sum * 100)}% {weightsAreValid ? "✓" : "— must equal 100%"}</div>
+      <button suppressHydrationWarning className="button" onClick={recompute} disabled={!weightsAreValid}>Recompute</button>
     </aside>
     <section className="map" aria-label={`NASA GIBS basin map using ${GIBS_LAYERS[layer].sensor}`}><AresMap records={ranked} layer={layer} selectedBasinId={selectedBasinId} onSelect={setSelectedBasinId} /></section>
     <aside className="card">
