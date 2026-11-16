@@ -1,0 +1,9 @@
+{
+  "fallback": true,
+  "briefs": [
+    {
+      "month": 1,
+      "answer": "ARES fallback mode: ranked basin-month results are available in the Explorer. Ask ARES is limited to the stored NASA dataset until an endpoint is configured."
+    }
+  ]
+}

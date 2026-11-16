@@ -1,4 +1,20 @@
-﻿# ARES: Planetary Analog Temporal Discovery Engine
+# ARES: Planetary Analog Temporal Discovery Engine
+
+The Next.js application compares 56 Earth endorheic basins across 672 stored monthly
+windows against Mars and Moon target signatures. Values come from the checked-in NASA
+pipeline output; missing measurements are disclosed rather than fabricated.
+
+## Run locally
+
+```bash
+npm ci
+npm run dev
+```
+
+Open `http://localhost:3000`. Run `npm test` for the focused similarity tests and
+`npm run build` for the production build. See [DEPLOY.md](DEPLOY.md) for Amplify SSR
+deployment and [scripts/README_PIPELINE.md](scripts/README_PIPELINE.md) for offline EMIT
+ingestion.
 
 Motor de descubrimiento temporal basado en datos abiertos de la NASA para identificar las mejores ventanas mensuales de campaña en 56 cuencas endorreicas terrestres como analogos de sitios clave en la Luna y Marte.
 
