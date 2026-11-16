@@ -23,7 +23,7 @@ ingestion.
 
    ```env
    GOOGLE_AI_API_KEY=your_key_here
-   GOOGLE_AI_MODEL=gemini-2.5-flash
+   GOOGLE_AI_MODEL=gemini-3.8-flash
    ```
 
 3. Restart `npm run dev`. The key is used only by the server route `/api/ask`.
