@@ -1,3 +1,4 @@
+<img width="1136" height="944" alt="ARES PROJECT 2" src="https://github.com/user-attachments/assets/527f38e6-da43-4921-8051-7755f2d13ad0" />
 # ARES: Planetary Analog Temporal Discovery Engine
 
 This repository contains the source code for the **ARES** Next.js web application and offline NASA data pipeline. ARES evaluates **56 Earth endorheic basins** across **672 monthly climatology windows** to identify seasonal field-campaign analogues for key **Mars** and **Moon** exploration targets.
