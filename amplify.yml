@@ -6,6 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
+        - env | grep -e '^GOOGLE_AI_API_KEY=' -e '^GOOGLE_AI_MODEL=' >> .env.production
         - npm run build
   artifacts:
     baseDirectory: .next
