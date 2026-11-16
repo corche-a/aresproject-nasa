@@ -113,11 +113,8 @@ payload = {
     "records": records,
 }
 
-os.makedirs("frontend", exist_ok=True)
-with open("frontend/analogs_data.json", "w", encoding="utf-8") as f:
+os.makedirs("public/data", exist_ok=True)
+with open("public/data/analogs_data.json", "w", encoding="utf-8") as f:
     json.dump(payload, f, ensure_ascii=False)
-
-with open("frontend/analogs_data.js", "w", encoding="utf-8") as f:
-    f.write("window.ARES_DATA = " + json.dumps(payload, ensure_ascii=False) + ";\n")
 
 print(f"Motor generado: {len(records)} ventanas evaluadas para {len(TARGETS)} sitios planetarios.")

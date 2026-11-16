@@ -56,6 +56,8 @@ button,input,select{font:inherit}
 .score{color:var(--red);font-weight:800;white-space:nowrap}
 .ranking-heading{padding-bottom:10px;border-bottom:1px solid var(--line)}
 .ranking-context{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.show-more-button{width:100%;margin-top:14px;padding:10px 12px;border:1px solid var(--blue);border-radius:4px;background:#fff;color:var(--blue);font-size:12px;font-weight:800;cursor:pointer}
+.show-more-button:hover,.show-more-button:focus-visible{background:var(--blue);color:#fff}
 .selected-location{margin-top:18px;padding:18px;background:var(--navy);color:#fff;border:1px solid var(--navy);border-top:4px solid var(--red);border-radius:7px;box-shadow:0 8px 18px rgba(11,31,58,.16)}
 .selected-location-heading{display:flex;align-items:center;gap:10px}
 .selected-location .label{color:#9fc4ee}

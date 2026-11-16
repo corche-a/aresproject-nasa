@@ -1,6 +1,6 @@
 # Missing fields
 
-The current `frontend/analogs_data.json` contract does not contain:
+The current `public/data/analogs_data.json` contract does not contain:
 
 - closed-basin and relief classification;
 - EMIT scene counts or measured mineral identifiers (the mineral profile is a literature prior);

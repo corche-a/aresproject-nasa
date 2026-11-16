@@ -16,6 +16,21 @@ Open `http://localhost:3000`. Run `npm test` for the focused similarity tests an
 deployment and [scripts/README_PIPELINE.md](scripts/README_PIPELINE.md) for offline EMIT
 ingestion.
 
+## Enable Ask ARES with Google AI Studio
+
+1. Create or regenerate a Gemini API key in Google AI Studio.
+2. Create `.env.local` in the project root and add:
+
+   ```env
+   GOOGLE_AI_API_KEY=your_key_here
+   GOOGLE_AI_MODEL=gemini-2.5-flash
+   ```
+
+3. Restart `npm run dev`. The key is used only by the server route `/api/ask`.
+4. In Amplify, add the same variables under the SSR environment variables and redeploy.
+
+Never commit `.env.local` or expose the key with a `NEXT_PUBLIC_*` variable.
+
 Motor de descubrimiento temporal basado en datos abiertos de la NASA para identificar las mejores ventanas mensuales de campaña en 56 cuencas endorreicas terrestres como analogos de sitios clave en la Luna y Marte.
 
 ## Arquitectura y Fuentes de Datos
@@ -29,10 +44,9 @@ Motor de descubrimiento temporal basado en datos abiertos de la NASA para identi
     git clone https://github.com/corche-a/aresproject-nasa.git
     cd aresproject-nasa
 
-2. Abrir `frontend/index.html` directamente en cualquier navegador web para explorar el mapa interactivo y los perfiles estacionales.
-3. Para integrar los resultados de **EMIT (AppEEARS)** una vez descargado el ZIP:
+2. Open `http://localhost:3000` after starting Next.js to explore the map and seasonal profiles.
+3. To integrate **EMIT (AppEEARS)** results after downloading the ZIP:
    - Colocar los archivos `.csv` en `data/raw/appeears/`
    - Ejecutar:
 
-    python scripts/merge_appeears.py
     python scripts/build_engine.py

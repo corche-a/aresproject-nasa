@@ -61,11 +61,11 @@ export default async function Basin({ params }: { params: Promise<{ id: string }
     <section className="hero">
       <Link href="/explorer" className="eyebrow">← Back to Explorer</Link>
       <h1>{best.record.basin_name}</h1>
-      <p>{best.record.lat}, {best.record.lon} · Best stored window: {best.record.month_name} · Compared with {best.target.name}</p>
+      <p>{best.record.lat}, {best.record.lon} · Best climatology window: {best.record.month_name} · Compared with {best.target.name}</p>
       <div className="verdict">
         <div className="verdict-label">Primary planetary analogue</div>
         <div className="verdict-target">{best.target.body === "Moon" ? "Moon analogue" : "Mars analogue"}</div>
-        <div className="verdict-detail">{best.target.name} · {(best.record.score * 100).toFixed(1)}% similarity · {best.record.month_name} window</div>
+        <div className="verdict-detail">{best.target.name} · {(best.record.score * 100).toFixed(1)}% similarity · {best.record.month_name} climatology</div>
       </div>
     </section>
 
@@ -84,7 +84,7 @@ export default async function Basin({ params }: { params: Promise<{ id: string }
       <div className="label">Location data</div>
       <div className="location-summary">
         <div><span className="summary-label">Coordinates</span><strong>{best.record.lat.toFixed(4)}°, {best.record.lon.toFixed(4)}°</strong></div>
-        <div><span className="summary-label">Best month</span><strong>{best.record.month_name}</strong></div>
+        <div><span className="summary-label">Best climatology month</span><strong>{best.record.month_name}</strong></div>
         <div><span className="summary-label">Elevation</span><strong>{best.record.elevation_m.toFixed(1)} m</strong></div>
         <div><span className="summary-label">Analogue target</span><strong>{best.target.body}</strong></div>
       </div>

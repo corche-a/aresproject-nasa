@@ -1,7 +1,10 @@
-# AWS Amplify deployment
+# Amplify deployment
 
-Connect this GitHub repository to Amplify Hosting, select the Next.js SSR preset, and set
-`ARES_AI_ENDPOINT`, optional `ARES_AI_TOKEN`, `AWS_REGION`, and optional `DATA_BUCKET` in the
-Amplify console. Server variables must be exposed to the SSR compute runtime (do not use
-`NEXT_PUBLIC_*` for secrets). Attach only the required data-access permissions to the SSR
-compute IAM role. The default AWS SDK credential chain is used; keys are never committed.
+Connect this GitHub repository to Amplify Hosting and select the Next.js SSR preset. Add
+`GOOGLE_AI_API_KEY` and, optionally, `GOOGLE_AI_MODEL` in the Amplify environment variables.
+Server variables must be exposed to the SSR runtime; never use `NEXT_PUBLIC_*` for secrets.
+The API key is used only by `/api/ask` and is never sent to the browser.
+
+Before deploying, create the key in Google AI Studio and restrict it where possible.
+If a key has been shared in a screenshot, chat, commit, or log, revoke it and create
+a replacement before adding the replacement to Amplify.
