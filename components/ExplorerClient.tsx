@@ -83,9 +83,15 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
           context: { month: applied.month, target: appliedTarget.name, weights: applied.weights },
         }),
       });
-      const result = await response.json() as AskResponse;
-      if (!response.ok) throw new Error(result.answer || "ARES could not answer the question.");
-      setAiResponse(result);
+      const responseText = await response.text();
+      let result: Partial<AskResponse> = {};
+      try {
+        result = responseText ? JSON.parse(responseText) as Partial<AskResponse> : {};
+      } catch {
+        throw new Error(`ARES request failed (${response.status}). The server returned an invalid response.`);
+      }
+      if (!response.ok) throw new Error(result.answer || `ARES request failed (${response.status}).`);
+      setAiResponse(result as AskResponse);
     } catch (error) {
       setAiResponse({ answer: error instanceof Error ? error.message : "ARES could not answer the question.", label: "Request error" });
     } finally {
