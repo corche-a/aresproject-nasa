@@ -3,6 +3,7 @@ import { limits } from "../../../lib/limits";
 import { rankRecords, scoreBreakdown } from "../../../lib/similarity";
 import Link from "next/link";
 import { targetDescription } from "../../../lib/presentation";
+import LocationDetails from "../../../components/LocationDetails";
 
 const metricLabels = {
   aridity: "Aridity / dryness",
@@ -71,6 +72,8 @@ export default async function Basin({ params }: { params: Promise<{ id: string }
       <p><strong>What does not match:</strong> the main differences are <strong>{gapMetrics.map((item) => metricLabels[item.key]).join(", ") || "within the configured tolerance"}</strong>.</p>
       <p className="muted">This is a specialized Earth analogue for the selected process, not a complete copy of {best.target.body}. Gravity, atmosphere, radiation and other planetary conditions remain different.</p>
     </section>
+
+    <LocationDetails record={best.record} />
 
     <section className="card" style={{ marginTop: 16 }}>
       <div className="label">Location data</div>

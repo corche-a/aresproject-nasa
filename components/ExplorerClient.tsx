@@ -21,6 +21,7 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
   const [targetId, setTargetId] = useState(data.targets[0].id);
   const [month, setMonth] = useState(1);
   const [layer, setLayer] = useState<GibsLayer>("blue_marble");
+  const [selectedBasinId, setSelectedBasinId] = useState<string | null>(null);
   const target = data.targets.find((item) => item.id === targetId) ?? data.targets[0];
   const [draftWeights, setDraftWeights] = useState<Record<MetricKey, number>>(target.weights);
   const [applied, setApplied] = useState({ targetId: target.id, month: 1, weights: target.weights });
@@ -40,6 +41,7 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
   const recompute = () => {
     if (Math.abs(sum - 1) > 0.001) return;
     setApplied({ targetId, month, weights: { ...draftWeights } });
+    setSelectedBasinId(null);
   };
 
   return <div className="explorer">
@@ -63,10 +65,10 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
       <div className={Math.abs(sum - 1) <= 0.001 ? "weights-ok" : "weights-error"}>Total: {Math.round(sum * 100)}% {Math.abs(sum - 1) <= 0.001 ? "✓" : "— must equal 100%"}</div>
       <button suppressHydrationWarning className="button" onClick={recompute} disabled={Math.abs(sum - 1) > 0.001}>Recompute</button>
     </aside>
-    <section className="map" aria-label={`NASA GIBS basin map using ${GIBS_LAYERS[layer].sensor}`}><AresMap records={ranked} layer={layer} /></section>
+    <section className="map" aria-label={`NASA GIBS basin map using ${GIBS_LAYERS[layer].sensor}`}><AresMap records={ranked} layer={layer} selectedBasinId={selectedBasinId} onSelect={setSelectedBasinId} /></section>
     <aside className="card">
-      <div className="label">{data.records.find((record) => record.month === applied.month)?.month_name} ranking · {appliedTarget.name}</div>
-      {ranked.map((record, index) => <Link className="rank" href={`/basin/${record.basin_id}`} key={record.basin_id}><span><b>{index + 1}.</b> {record.basin_name}<br /><small className="muted">{record.lat}, {record.lon}</small></span><span className="score">{(record.score * 100).toFixed(1)}%</span></Link>)}
+      <div className="ranking-heading"><div className="label">Select a location</div><span className="ranking-context">{data.records.find((record) => record.month === applied.month)?.month_name} ranking · {appliedTarget.name}</span></div>
+      {ranked.map((record, index) => <div aria-pressed={record.basin_id === selectedBasinId} className={`rank rank-button ${record.basin_id === selectedBasinId ? "rank-selected" : ""}`} onClick={() => setSelectedBasinId(record.basin_id)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") setSelectedBasinId(record.basin_id); }} role="button" tabIndex={0} key={record.basin_id}><div className="rank-main"><span><b>{index + 1}.</b> {record.basin_name}<br /><small className="muted">{record.lat}, {record.lon}</small></span>{record.basin_id === selectedBasinId && <Link className="rank-details-button" href={`/basin/${record.basin_id}`} onClick={(event) => event.stopPropagation()}>View all information <span aria-hidden="true">→</span></Link>}</div><span className="score">{(record.score * 100).toFixed(1)}%</span></div>)}
       <div className="card" style={{ marginTop: 16 }}><div className="label">Ask ARES</div><p className="muted">AI-generated summaries from NASA data. Endpoint is optional; deterministic briefs remain available.</p><input suppressHydrationWarning placeholder="Ask about a basin or month" aria-label="Ask ARES question" /></div>
     </aside>
   </div>;
