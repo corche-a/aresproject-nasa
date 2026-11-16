@@ -1,6 +1,6 @@
 import { getBasin, getData } from "../../../lib/data";
 import { limits } from "../../../lib/limits";
-import { rankRecords, scoreBreakdown } from "../../../lib/similarity";
+import { rankRecords, scoreBreakdown, targetWeights } from "../../../lib/similarity";
 import Link from "next/link";
 import { targetDescription } from "../../../lib/presentation";
 import LocationDetails from "../../../components/LocationDetails";
@@ -11,6 +11,10 @@ const metricLabels = {
   dust: "Dust / aeolian activity",
   slope: "Topography / slope",
   mineral: "Mineral affinity",
+  latitude: "Latitude / orbital geometry",
+  elevation: "Elevation / datum",
+  platform: "Platform stability",
+  weather: "Weather window",
 } as const;
 
 function badge(label: "Measured" | "Derived" | "Reference") {
@@ -31,7 +35,8 @@ export default async function Basin({ params }: { params: Promise<{ id: string }
     rankRecords(rows, target).map((record) => ({ record, target })),
   ).sort((a, b) => b.record.score - a.record.score);
   const best = candidates[0];
-  const breakdown = scoreBreakdown(best.record, best.target);
+  const bestWeights = targetWeights(best.target);
+  const breakdown = scoreBreakdown(best.record, best.target, bestWeights);
   const closeMetrics = breakdown.filter((item) => Math.abs(item.value - item.target) <= 0.15);
   const gapMetrics = breakdown.filter((item) => Math.abs(item.value - item.target) > 0.15);
   const parameters = [
@@ -100,7 +105,7 @@ export default async function Basin({ params }: { params: Promise<{ id: string }
       <div className="chart-legend"><span><i className="legend-earth" /> Earth location</span><span><i className="legend-target" /> {best.target.body} reference</span></div>
       <div className="label" style={{ marginTop: 24 }}>Detailed comparison</div>
       <table className="table"><thead><tr><th>Dimension</th><th>Earth value</th><th>Target signature</th><th>Weight</th><th>Interpretation</th></tr></thead><tbody>
-        {breakdown.map((item) => <tr key={item.key}><td>{metricLabels[item.key]}</td><td>{item.value.toFixed(3)}</td><td>{item.target.toFixed(3)} {badge("Reference")}</td><td>{(best.target.weights[item.key] * 100).toFixed(0)}%</td><td className="muted">{Math.abs(item.value - item.target) <= 0.15 ? "Close match" : "Important difference"}</td></tr>)}
+        {breakdown.map((item) => <tr key={item.key}><td>{metricLabels[item.key]}</td><td>{item.value.toFixed(3)}</td><td>{item.target.toFixed(3)} {badge("Reference")}</td><td>{(bestWeights[item.key] * 100).toFixed(0)}%</td><td className="muted">{Math.abs(item.value - item.target) <= 0.15 ? "Close match" : "Important difference"}</td></tr>)}
       </tbody></table>
       <p className="muted">Target signatures are reference values defined in the engine, not direct measurements of Mars or the Moon. The current dataset has no EMIT scenes, aerosol product, water time series, ice, caves, biology or radiation measurements.</p>
     </section>

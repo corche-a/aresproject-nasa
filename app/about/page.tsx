@@ -13,10 +13,10 @@ export default function About() {
       <article><h2>NASA POWER</h2><p>Provides temperature, precipitation, wind, humidity, and solar-radiation climate variables for basin coordinates.</p><code>power.larc.nasa.gov</code></article>
       <article><h2>NASA GIBS</h2><p>Provides the interactive map imagery and selectable Blue Marble, MODIS Terra, MODIS Aqua, and VIIRS layers.</p><code>gibs.earthdata.nasa.gov</code></article>
       <article><h2>Copernicus DEM</h2><p>Provides the elevation and slope inputs used in the stored basin dataset.</p><code>Copernicus DEM</code></article>
-      <article><h2>Google Places (optional)</h2><p>Can provide location photographs when a server-only Google Maps key is configured. Without it, the interface reports that photos are unavailable.</p><code>GOOGLE_MAPS_API_KEY</code></article>
       <article><h2>OpenStreetMap Nominatim</h2><p>Provides reverse-geocoded country and address context for a selected location, with server-side caching.</p><code>nominatim.openstreetmap.org</code></article>
       <article><h2>ARES AI (optional)</h2><p>Connects to your AWS endpoint for summaries. The application remains usable in fallback mode when no endpoint is configured.</p><code>ARES_AI_ENDPOINT</code></article>
     </div></section>
+    <section className="card about-section"><div className="label">Complementary scoring layers</div><h2>Analogy fidelity and operational screening</h2><p>The Explorer weights NASA POWER aridity, thermal range, wind and humidity signals alongside DEM slope, mineral-literature affinity, latitude, elevation, platform flatness, and a transparent weather-window proxy. Granulometry, ice, brines, caves, cloud cover, and aerosol opacity are not scored until verified NASA products are added.</p></section>
     <section className="card about-section"><div className="label">Responsible interpretation</div><h2>Analogy is specific, never absolute.</h2><p>Every result identifies the dimensions that match and the dimensions that diverge. Earth does not reproduce extraterrestrial gravity, atmosphere, radiation, or planetary operations. Protected areas, local communities, and environmental authorities must be consulted before any field activity.</p></section>
   </main>;
 }

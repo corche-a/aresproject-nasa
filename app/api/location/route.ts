@@ -6,6 +6,7 @@ export async function GET(request: Request) {
   if (!Number.isFinite(lat) || !Number.isFinite(lon)) return Response.json({ error: "lat and lon are required" }, { status: 400 });
 
   let country = "Country unavailable";
+  let countryEnglish = country;
   let address = "Address unavailable";
   try {
     const reverse = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`, {
@@ -16,6 +17,14 @@ export async function GET(request: Request) {
       const location = await reverse.json() as { display_name?: string; address?: { country?: string } };
       country = location.address?.country ?? country;
       address = location.display_name ?? address;
+    }
+    const englishReverse = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&accept-language=en&lat=${lat}&lon=${lon}`, {
+      headers: { "user-agent": "ARES-Analog-Discovery/1.0" },
+      next: { revalidate: 86400 },
+    });
+    if (englishReverse.ok) {
+      const location = await englishReverse.json() as { address?: { country?: string } };
+      countryEnglish = location.address?.country ?? countryEnglish;
     }
   } catch (error) {
     console.error("Reverse geocoding failed", error);
@@ -45,5 +54,5 @@ export async function GET(request: Request) {
       console.error("Google Places lookup failed", error);
     }
   }
-  return Response.json({ country, address, photos: photos.slice(0, 5) });
+  return Response.json({ country, countryEnglish, address, photos: photos.slice(0, 5) });
 }

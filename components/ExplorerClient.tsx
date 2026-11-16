@@ -3,19 +3,26 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import AresMap from "./AresMap";
-import { rankRecords, weightsSum } from "../lib/similarity";
+import { metricKeys, rankRecords, targetWeights, weightsSum } from "../lib/similarity";
 import { targetDescription } from "../lib/presentation";
 import { GIBS_LAYERS, type GibsLayer } from "../lib/gibs";
 import type { AnalogsData, MetricKey } from "../lib/types";
 
-const metricKeys: MetricKey[] = ["aridity", "thermal", "dust", "slope", "mineral"];
 const metricLabels: Record<MetricKey, string> = {
   aridity: "Aridity / dryness",
   thermal: "Thermal contrast",
   dust: "Dust / aeolian",
   slope: "Topography / slope",
   mineral: "Mineral affinity",
+  latitude: "Latitude / orbital geometry",
+  elevation: "Elevation / datum",
+  platform: "Platform stability",
+  weather: "Weather window",
 };
+const metricGroups = [
+  { title: "A · Analog fidelity", keys: ["slope", "mineral", "thermal", "aridity", "dust"] as MetricKey[] },
+  { title: "B · Base and launch operations", keys: ["latitude", "elevation", "platform", "weather"] as MetricKey[] },
+];
 
 export default function ExplorerClient({ data }: { data: AnalogsData }) {
   const [targetId, setTargetId] = useState(data.targets[0].id);
@@ -23,8 +30,8 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
   const [layer, setLayer] = useState<GibsLayer>("blue_marble");
   const [selectedBasinId, setSelectedBasinId] = useState<string | null>(null);
   const target = data.targets.find((item) => item.id === targetId) ?? data.targets[0];
-  const [draftWeights, setDraftWeights] = useState<Record<MetricKey, number>>(target.weights);
-  const [applied, setApplied] = useState({ targetId: target.id, month: 1, weights: target.weights });
+  const [draftWeights, setDraftWeights] = useState<Record<MetricKey, number>>(targetWeights(target));
+  const [applied, setApplied] = useState({ targetId: target.id, month: 1, weights: targetWeights(target) });
   const appliedTarget = data.targets.find((item) => item.id === applied.targetId) ?? target;
   const ranked = useMemo(() => {
     const monthRows = data.records.filter((record) => record.month === applied.month);
@@ -36,7 +43,7 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
   const updateTarget = (id: string) => {
     const next = data.targets.find((item) => item.id === id) ?? data.targets[0];
     setTargetId(next.id);
-    setDraftWeights(next.weights);
+    setDraftWeights(targetWeights(next));
   };
   const recompute = () => {
     if (Math.abs(sum - 1) > 0.001) return;
@@ -61,7 +68,8 @@ export default function ExplorerClient({ data }: { data: AnalogsData }) {
         {Array.from({ length: 12 }, (_, index) => <option key={index + 1} value={index + 1}>{index + 1} · {data.records.find((record) => record.month === index + 1)?.month_name}</option>)}
       </select>
       <div className="label">Similarity weights</div>
-      {metricKeys.map((key) => <label className="weight-control" key={key}><span>{metricLabels[key]} <b>{Math.round(draftWeights[key] * 100)}%</b></span><input suppressHydrationWarning aria-label={`${metricLabels[key]} weight`} type="range" min="0" max="100" value={Math.round(draftWeights[key] * 100)} onChange={(event) => setDraftWeights({ ...draftWeights, [key]: Number(event.target.value) / 100 })} /></label>)}
+      <p className="muted target-description">NASA-derived and transparent proxy signals. Missing resources data is not scored.</p>
+      {metricGroups.map((group) => <section className="weight-group" key={group.title}><div className="weight-group-title">{group.title}</div>{group.keys.map((key) => <label className="weight-control" key={key}><span>{metricLabels[key]} <b>{Math.round(draftWeights[key] * 100)}%</b></span><input suppressHydrationWarning aria-label={`${metricLabels[key]} weight`} type="range" min="0" max="100" value={Math.round(draftWeights[key] * 100)} onChange={(event) => setDraftWeights({ ...draftWeights, [key]: Number(event.target.value) / 100 })} /></label>)}</section>)}
       <div className={Math.abs(sum - 1) <= 0.001 ? "weights-ok" : "weights-error"}>Total: {Math.round(sum * 100)}% {Math.abs(sum - 1) <= 0.001 ? "✓" : "— must equal 100%"}</div>
       <button suppressHydrationWarning className="button" onClick={recompute} disabled={Math.abs(sum - 1) > 0.001}>Recompute</button>
     </aside>

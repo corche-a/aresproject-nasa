@@ -1,4 +1,4 @@
-export type MetricKey = "aridity" | "thermal" | "dust" | "slope" | "mineral";
+export type MetricKey = "aridity" | "thermal" | "dust" | "slope" | "mineral" | "latitude" | "elevation" | "platform" | "weather";
 export type RecordValue = number | string;
 export interface BasinRecord {
   basin_id: string; basin_name: string; lat: number; lon: number; month: number; month_name: string;

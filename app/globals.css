@@ -35,6 +35,8 @@ button,input,select{font:inherit}
 .weight-control span{display:flex;justify-content:space-between;gap:8px}
 .weight-control b{color:var(--blue)}
 .weight-control input{margin-top:5px;accent-color:var(--blue)}
+.weight-group{display:grid;gap:8px;padding:10px 0;border-top:1px solid var(--line)}
+.weight-group-title{color:var(--navy);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
 .weights-ok,.weights-error{font-size:12px}
 .weights-ok{color:#19713b}
 .weights-error{color:#b54708}
@@ -78,6 +80,11 @@ button,input,select{font:inherit}
 .photo-carousel img{width:220px;height:135px;object-fit:cover;border-radius:5px;border:1px solid var(--line);flex:0 0 auto}
 .photo-unavailable{margin-top:10px;padding:24px;background:var(--surface-soft);border:1px dashed #aebdce;color:var(--muted)}
 .photo-panel small{display:block;margin-top:10px}
+.nasa-coverage{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px}
+.coverage-value{color:var(--blue);font-size:25px;font-weight:800;margin-top:7px}
+.coverage-value span{color:var(--ink);font-size:12px;font-weight:700}
+.nasa-coverage p{margin:5px 0;font-size:12px}
+.nasa-coverage small{display:block;font-size:11px}
 .about-hero{padding-bottom:35px}
 .about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .about-section{margin-top:18px}
