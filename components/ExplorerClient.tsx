@@ -26,7 +26,7 @@ const metricGroups = [
 interface AskResponse {
   answer: string;
   fallback?: boolean;
-  fallbackReason?: "missing_api_key" | "request_failed" | "service_unavailable";
+  fallbackReason?: "missing_api_key" | "request_failed" | "service_unavailable" | "invalid_api_key" | "quota_exceeded" | "model_unavailable";
   label: string;
   model?: string;
 }

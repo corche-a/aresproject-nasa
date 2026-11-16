@@ -9,6 +9,13 @@ interface GeminiResponse {
   candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
 }
 
+export class GoogleAiRequestError extends Error {
+  constructor(public readonly status: number, details: string) {
+    super(`Google AI Studio request failed: ${status} ${details}`);
+    this.name = "GoogleAiRequestError";
+  }
+}
+
 export async function askAres(question: string, context: AskContext) {
   const apiKey = process.env.GOOGLE_AI_API_KEY;
   if (!apiKey) return null;
@@ -21,7 +28,7 @@ export async function askAres(question: string, context: AskContext) {
     `Question: ${question}`,
     `ARES context: ${JSON.stringify(context)}`,
   ].join("\n\n");
-  const response = await fetch(endpoint, {
+  const request = {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify({
@@ -29,10 +36,15 @@ export async function askAres(question: string, context: AskContext) {
       generationConfig: { temperature: 0.2, maxOutputTokens: 600 },
     }),
     signal: AbortSignal.timeout(30000),
-  });
+  };
+  let response = await fetch(endpoint, request);
+  if (response.status === 503) {
+    await new Promise((resolve) => setTimeout(resolve, 1200));
+    response = await fetch(endpoint, request);
+  }
   if (!response.ok) {
     const details = (await response.text()).slice(0, 300);
-    throw new Error(`Google AI Studio request failed: ${response.status} ${details}`);
+    throw new GoogleAiRequestError(response.status, details);
   }
 
   const result = await response.json() as GeminiResponse;
